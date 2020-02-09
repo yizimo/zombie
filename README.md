@@ -2,11 +2,10 @@
 
 前端项目
 下载之后先在项目文件夹
-ng add ng-zorro-antd
+`ng add ng-zorro-antd `
 配置echarts
-ng install echarts -S
-ng install ngx-echarts -S
-
+`ng install echarts -S`
+`ng install ngx-echarts -S`
 ## data文件夹
 数据中心展示
 
