@@ -3,8 +3,7 @@
 前端项目
 下载之后先在项目文件夹
 ng add ng-zorro-antd
-
-然后
+配置echarts
 ng install echarts -S
 ng install ngx-echarts -S
 
