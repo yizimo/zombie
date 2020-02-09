@@ -6,6 +6,7 @@
 配置echarts
 `ng install echarts -S`
 `ng install ngx-echarts -S`
+
 ## data文件夹
 数据中心展示
 
