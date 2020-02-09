@@ -1,27 +1,19 @@
 # Zimo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
+前端项目
 
-## Development server
+## data文件夹
+数据中心展示
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## echartts文件夹
+所有的echart图表展示
+（echarts-line折线图,echarts-pip饼图,echarts-sunburst旭日图,show-echarts热力图）
 
-## Code scaffolding
+## result
+判定结果展示
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## first
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+上传
+single 单个
+more 文件上传
