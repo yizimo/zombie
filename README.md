@@ -1,6 +1,12 @@
 # Zimo
 
 前端项目
+下载之后先在项目文件夹
+ng add ng-zorro-antd
+
+然后
+ng install echarts -S
+ng install ngx-echarts -S
 
 ## data文件夹
 数据中心展示
