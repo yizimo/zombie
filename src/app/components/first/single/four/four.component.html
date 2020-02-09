@@ -1,0 +1,326 @@
+<form nz-form [formGroup]="validateFormFour">
+  <div nz-row [nzGutter]="24">
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">第一年</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-year-picker formControlName="time"  (ngModelChange)="la($event)" ></nz-year-picker>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">第二年</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-year-picker nzDisabled formControlName="timeTwo" ></nz-year-picker>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8" >
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12" >第三年</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-year-picker formControlName="timeThree" nzDisabled></nz-year-picker>
+        </nz-form-control>
+      </nz-form-item >
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">从业人数</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="employees"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">从业人数</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="employeesTwo"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8" >
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12" >从业人数</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="employeesThree"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item >
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">资产总额</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="totalAssets"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">资产总额</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="totalAssetsTwo"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8" >
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12" >资产总额</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="totalAssetsThree"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item >
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">负载总额</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="totalLiabilities"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">负载总额</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="totalLiabilitiesTwo"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8" >
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12" >负载总额</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="totalLiabilitiesThree"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item >
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">营业总收入</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="grossRevenue"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">营业总收入</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="grossRevenueTwo"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8" >
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12" >营业总收入</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="grossRevenueThree"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item >
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">主营业务</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="mainBusinessIncome"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">主营业务</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="mainBusinessIncomeTwo"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8" >
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12" >主营业务</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="mainBusinessIncomeThree"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item >
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">利润总额</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="totalProfit"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">利润总额</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="totalProfitTwo"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8" >
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12" >利润总额</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="totalProfitThree"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item >
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">净利润</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="retainedProfit"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">净利润</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="retainedProfitTwo"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8" >
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12" >净利润</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="retainedProfitThree"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item >
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">纳税总额</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="totalTax"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">纳税总额</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="totalTaxTwo"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8" >
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12" >纳税总额</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="totalTaxThree"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item >
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">所有者权益合计</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="ownersEquity"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">所有者权益合计</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="ownersEquityTwo"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8" >
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12" >所有者权益合计</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="ownersEquityThree"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item >
+    </div>
+  </div>
+
+</form>

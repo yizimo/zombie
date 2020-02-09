@@ -1,0 +1,294 @@
+<form nz-form [formGroup]="validateFormThree">
+  <div nz-row [nzGutter]="24">
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">第一年</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-year-picker formControlName="time"  (ngModelChange)="la($event)" ></nz-year-picker>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">第二年</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-year-picker nzDisabled formControlName="timeTwo" ></nz-year-picker>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8" >
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12" >第三年</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-year-picker formControlName="timeThree" nzDisabled></nz-year-picker>
+        </nz-form-control>
+      </nz-form-item >
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">债权融资额度</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="claimLimit"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">债权融资额度</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="claimLimitTwo"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8" >
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12" >债权融资额度</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="claimLimitThree"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item >
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">债权融资成本</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="claimCostThree"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">债权融资成本</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="claimCostTwo"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8" >
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12" >债权融资成本</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="claimCostThree"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item >
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">股权融资额度</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="equityLimit"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">股权融资额度</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="equityLimitTwo"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8" >
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12" >股权融资额度</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="equityLimitThree"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item >
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">股权融资成本</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="equityCostThree"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">股权融资成本</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="equityCostTwo"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8" >
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12" >股权融资成本</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="equityCostThree"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item >
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">内部融资和贸易融资额度</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="interiorTradeLimit"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">内部融资和贸易融资额度</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="interiorTradeLimitTwo"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8" >
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12" >内部融资和贸易融资额度</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="interiorTradeLimitThree"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item >
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">内部融资和贸易融资成本</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="interiorTradeCost"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">内部融资和贸易融资成本</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="interiorTradeCostTwo"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8" >
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12" >内部融资和贸易融资成本</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="interiorTradeCostThree"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item >
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">项目融资和政策融资额度</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="projectPolicyLimit"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">项目融资和政策融资额度</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="projectPolicyLimitTwo"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8" >
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12" >项目融资和政策融资额度</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="projectPolicyLimitThree"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item >
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">项目融资和政策融资成本</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="projectPolicyCost"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12">项目融资和政策融资成本</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="projectPolicyCostTwo"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8" >
+      <nz-form-item>
+        <nz-form-label [nzSpan]="12" >项目融资和政策融资成本</nz-form-label>
+        <nz-form-control [nzSpan]="12">
+          <nz-input-number
+            formControlName="projectPolicyCostThree"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item >
+    </div>
+
+  </div>
+
+</form>

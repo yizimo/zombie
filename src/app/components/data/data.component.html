@@ -1,0 +1,33 @@
+<div nz-row nzGutter="16" class="table-operations">
+  <div nz-col class="gutter-row" nzSpan="6" [nzPush]=1>
+    <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
+      <input type="text" nz-input placeholder="input search text" />
+    </nz-input-group>
+    <ng-template #suffixIconButton>
+      <button nz-button nzType="primary" nzSearch><i nz-icon nzType="search"></i></button>
+    </ng-template>
+  </div>
+  <div nz-col class="gutter-row" nzSpan="3" nzOffset="15">
+    <button class="button" nz-button >导出</button>
+  </div>
+  <div nz-col nzSpan="22" [nzPush]=1>
+    <nz-table #filterTable [nzData]="listOfDisplayData">
+      <thead>
+      <tr>
+        <th>企业ID</th>
+        <th >是否为僵尸企业</th>
+        <th>预警级别</th>
+        <th>整改意见</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let data of filterTable.data">
+        <td>{{ data.componyId }}</td>
+        <td>{{ data.flag == true ? '是' : '否' }}</td>
+        <td>{{ data.warningLevel }}</td>
+        <td>{{ data.advice }}</td>
+      </tr>
+      </tbody>
+    </nz-table>
+  </div>
+</div>

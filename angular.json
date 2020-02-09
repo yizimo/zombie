@@ -21,12 +21,21 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
+                "output": "/assets/"
+              }
             ],
             "styles": [
+              "src/theme.less",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/echarts/dist/echarts.js",
+              "node_modules/echarts/map/js/china.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -120,6 +129,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "zimo"
 }

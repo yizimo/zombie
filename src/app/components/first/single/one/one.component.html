@@ -1,0 +1,105 @@
+<form nz-form [formGroup]="validateForm" >
+  <div nz-row [nzGutter]="24">
+    <div nz-col [nzSpan]="8" >
+      <nz-form-item nzFlex>
+        <nz-form-label [nzSpan]="6" nzRequired>企业ID</nz-form-label>
+        <nz-form-control [nzSpan]="15" nzHasFeedback nzValidatingTip="Validating..." nzErrorTip="Id is error">
+          <nz-input-number
+            formControlName="id"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+
+    </div>
+    <div nz-col [nzSpan]="8" >
+      <nz-form-item nzFlex>
+        <nz-form-label nzRequired [nzSpan]="6">注册时间 </nz-form-label>
+        <nz-form-control [nzSpan]="15" nzHasFeedback nzValidatingTip="Validating..." nzErrorTip="time is error" >
+          <nz-date-picker formControlName="time"></nz-date-picker>
+        </nz-form-control>
+      </nz-form-item>
+
+    </div>
+    <div nz-col [nzSpan]="8" >
+      <nz-form-item nzFlex>
+        <nz-form-label nzRequired [nzSpan]="6">注册资本 </nz-form-label>
+        <nz-form-control [nzSpan]="15" nzHasFeedback nzValidatingTip="Validating..." nzErrorTip="money is error" >
+          <nz-input-number
+            formControlName="money"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+
+    </div>
+    <div nz-col [nzSpan]="8" >
+      <nz-form-item nzFlex>
+        <nz-form-label [nzSpan]="6" nzRequired>行业 </nz-form-label>
+        <nz-form-control [nzSpan]="15" nzHasFeedback nzValidatingTip="Validating..." nzErrorTip="industry is error">
+          <nz-select formControlName="industry">
+            <nz-option nzLabel="服务业" nzValue="1"></nz-option>
+            <nz-option nzLabel="工业" nzValue="2"></nz-option >
+            <nz-option nzLabel="交通运输业" nzValue="3"></nz-option >
+            <nz-option nzLabel="零售业" nzValue="4"></nz-option >
+            <nz-option nzLabel="商品服务业" nzValue="5"></nz-option >
+            <nz-option nzLabel="社区服务" nzValue="6"></nz-option>
+          </nz-select>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8" >
+      <nz-form-item nzFlex>
+        <nz-form-label [nzSpan]="6" nzRequired>区域 </nz-form-label>
+        <nz-form-control [nzSpan]="15" nzHasFeedback nzValidatingTip="Validating..." nzErrorTip="area is error">
+          <nz-select formControlName="area">
+            <nz-option nzLabel="福建" nzValue="1"></nz-option >
+            <nz-option nzLabel="广东" nzValue="2"></nz-option >
+            <nz-option nzLabel="江西" nzValue="3"></nz-option >
+            <nz-option nzLabel="山东" nzValue="4"></nz-option >
+            <nz-option nzLabel="广西" nzValue="5"></nz-option >
+            <nz-option nzLabel="湖南" nzValue="6"></nz-option >
+            <nz-option nzLabel="湖北" nzValue="7"></nz-option >
+          </nz-select>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+
+    <div nz-col [nzSpan]="8" >
+      <nz-form-item nzFlex>
+        <nz-form-label [nzSpan]="6" nzRequired>企业类型 </nz-form-label>
+        <nz-form-control [nzSpan]="15" nzHasFeedback nzValidatingTip="Validating..." nzErrorTip="type is error">
+          <nz-select formControlName="type">
+            <nz-option nzLabel="农名专业合作社" nzValue="1"></nz-option >
+            <nz-option nzLabel="集体所有制企业" nzValue="2"></nz-option >
+            <nz-option nzLabel="股份有限公司" nzValue="3"></nz-option >
+            <nz-option nzLabel="集体所有制企业" nzValue="4"></nz-option >
+            <nz-option nzLabel="合伙企业" nzValue="5"></nz-option >
+          </nz-select>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8" >
+      <nz-form-item nzFlex>
+        <nz-form-label [nzSpan]="6" nzRequired>控制人类型 </nz-form-label>
+        <nz-form-control [nzSpan]="15" nzHasFeedback nzValidatingTip="Validating..." nzErrorTip="controllingType is error">
+          <input
+            nz-input
+            formControlName="controllingType"
+          />
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="8" >
+      <nz-form-item nzFlex>
+        <nz-form-label [nzSpan]="6" nzRequired>控制人持股 </nz-form-label>
+        <nz-form-control [nzSpan]="15" nzHasFeedback nzValidatingTip="Validating..." nzErrorTip="controllingShareHold is error">
+          <nz-input-number
+            formControlName="controllingShareHold"
+            style="width:100%"
+          ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,29 @@
+<form nz-form [formGroup]="validateFromTwo">
+  <div nz-row [nzGutter]="24">
+    <div nz-col [nzSpan]="8" >
+      <nz-form-item>
+        <nz-form-label [nzSpan]="6" >专利数</nz-form-label>
+        <nz-form-control [nzSpan]="6">
+          <nz-input-number  formControlName="book" [nzSize]="100" ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item >
+    </div>
+    <div nz-col [nzSpan]="8" >
+      <nz-form-item>
+        <nz-form-label [nzSpan]="6">商标数</nz-form-label>
+        <nz-form-control [nzSpan]="6">
+          <nz-input-number  formControlName="book" [nzSize]="100" ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item >
+    </div>
+    <div nz-col [nzSpan]="8" >
+      <nz-form-item>
+        <nz-form-label [nzSpan]="6" >著作权数</nz-form-label>
+        <nz-form-control [nzSpan]="6" nzHasFeedback nzErrorTip="book is error">
+          <nz-input-number  formControlName="book" [nzSize]="100" ></nz-input-number>
+        </nz-form-control>
+      </nz-form-item >
+    </div>
+  </div>
+
+</form>

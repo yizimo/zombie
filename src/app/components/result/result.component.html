@@ -1,0 +1,54 @@
+<div style=" padding: 30px;">
+  <nz-row [nzGutter]="16">
+    <nz-col [nzSpan]="6">
+    <nz-card>
+      <nz-statistic
+        [nzValue]="11 "
+        [nzTitle]="'全部'"
+        [nzValueStyle]="{ color: 'blue' }"
+      >
+      </nz-statistic>
+    </nz-card>
+  </nz-col>
+    <nz-col [nzSpan]="6">
+      <nz-card>
+        <nz-statistic
+          [nzValue]="9"
+          [nzTitle]="'判定成功'"
+          [nzValueStyle]="{ color: 'blue' }"
+        >
+        </nz-statistic>
+        <ng-template #prefixTplTwo><i nz-icon nzType="arrow-down"></i></ng-template>
+      </nz-card>
+    </nz-col>
+    <nz-col [nzSpan]="6">
+      <nz-card>
+        <nz-statistic
+          [nzValue]="11 "
+          [nzTitle]="'正在判定'"
+          [nzValueStyle]="{ color: 'blue' }"
+        >
+        </nz-statistic>
+        <ng-template #prefixTplOne><i nz-icon nzType="arrow-up"></i></ng-template>
+      </nz-card>
+    </nz-col>
+    <nz-col [nzSpan]="6">
+      <nz-card>
+        <nz-statistic
+          [nzValue]="9"
+          [nzTitle]="'判定失败'"
+          [nzValueStyle]="{ color: 'blue' }"
+        >
+        </nz-statistic>
+        <ng-template #prefixTplTwo><i nz-icon nzType="arrow-down"></i></ng-template>
+      </nz-card>
+    </nz-col>
+    <nz-col nzSpan="24">
+      <div class="inner-content" >
+
+        <app-tabl></app-tabl>
+      </div>
+
+    </nz-col>
+  </nz-row>
+</div>
