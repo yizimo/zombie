@@ -8,6 +8,12 @@ import {TablComponent} from './components/result/tabl/tabl.component';
 import {DataComponent} from './components/data/data.component';
 import {ShowEchartsComponent} from './components/show-echarts/show-echarts.component';
 import {EcharttsComponent} from './components/echartts/echartts.component';
+import {InfoComponent} from './components/info/info.component';
+import {IAComponent} from './components/info/ia/ia.component';
+import {BIComponent} from './components/info/bi/bi.component';
+import {FCComponent} from './components/info/fc/fc.component';
+import {BSComponent} from './components/info/bs/bs.component';
+import {BCComponent} from './components/info/bc/bc.component';
 
 const routes: Routes = [
   {
@@ -31,6 +37,9 @@ const routes: Routes = [
   },
   {
     path: 'echartts', component: EcharttsComponent
+  },
+  {
+    path: 'info', component: InfoComponent
   },
   {
     path: '**', redirectTo: 'first/single'

@@ -26,6 +26,13 @@ import { EchartsLineComponent } from './components/echarts-line/echarts-line.com
 import { EcharttsComponent } from './components/echartts/echartts.component';
 import { EchartsSunburstComponent } from './components/echarts-sunburst/echarts-sunburst.component';
 import { EchartsPipComponent } from './components/echarts-pip/echarts-pip.component';
+import { EchartRelationComponent } from './components/echart-relation/echart-relation.component';
+import { InfoComponent } from './components/info/info.component';
+import { BIComponent } from './components/info/bi/bi.component';
+import { IAComponent } from './components/info/ia/ia.component';
+import { FCComponent } from './components/info/fc/fc.component';
+import { BSComponent } from './components/info/bs/bs.component';
+import { BCComponent } from './components/info/bc/bc.component';
 
 registerLocaleData(zh);
 
@@ -48,6 +55,13 @@ registerLocaleData(zh);
     EcharttsComponent,
     EchartsSunburstComponent,
     EchartsPipComponent,
+    EchartRelationComponent,
+    InfoComponent,
+    BIComponent,
+    IAComponent,
+    FCComponent,
+    BSComponent,
+    BCComponent
   ],
   imports: [
     BrowserModule,

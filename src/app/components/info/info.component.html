@@ -1,0 +1,25 @@
+<div nz-row nzGutter="16" class="table-operations">
+
+  <nz-page-header nz-col class="gutter-row" nzSpan="22" [nzPush]=1 nzBackIcon>
+    <nz-page-header-title>企业全息画像</nz-page-header-title>
+    <nz-page-header-footer>
+      <nz-tabset [nzSelectedIndex]="0">
+        <nz-tab nzTitle="基本信息" >
+          <app-bi></app-bi>
+        </nz-tab>
+        <nz-tab nzTitle="无形资产" >
+          <app-ia></app-ia>
+        </nz-tab>
+        <nz-tab nzTitle="融资渠道" >
+          <app-fc></app-fc>
+        </nz-tab>
+        <nz-tab nzTitle="资产负债" >
+          <app-bs></app-bs>
+        </nz-tab>
+        <nz-tab nzTitle="营业情况" >
+          <app-bc></app-bc>
+        </nz-tab>
+      </nz-tabset>
+    </nz-page-header-footer>
+  </nz-page-header>
+</div>
