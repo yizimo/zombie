@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Result} from '../../kind/result';
+import {DataService} from '../../services/data.service';
 
 @Component({
   selector: 'app-data',
@@ -9,38 +10,27 @@ import {Result} from '../../kind/result';
 export class DataComponent implements OnInit {
 
   // 搜索框
-  searchValue = '';
+  searchValue: number ;
   // 企业列表
-  listOfData: Array<Result> = [
-    {
-      componyId: 1,
-      flag: true,
-      warningLevel: 1,
-      advice: 'zimo'
-    },
-    {
-      componyId: 2,
-      flag: true,
-      warningLevel: 1,
-      advice: 'zimo'
-    },
-    {
-      componyId: 3,
-      flag: true,
-      warningLevel: 1,
-      advice: 'zimo'
-    },
-    {
-      componyId: 4,
-      flag: true,
-      warningLevel: 1,
-      advice: 'zimo'
-    }
-  ];
-  listOfDisplayData = [...this.listOfData];
-  constructor() { }
+  listOfData: any = [];
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.getResult();
   }
 
+  getResult(): void {
+    this.dataService.getResult().subscribe(data => {
+      console.log(data);
+      this.listOfData = data.data.results;
+    });
+    console.log(this.listOfData);
+  }
+
+  getResultBySearchName(): void {
+    console.log(this.searchValue);
+    this.dataService.getResultBySearchName(this.searchValue).subscribe(data => {
+      this.listOfData = data;
+    });
+  }
 }

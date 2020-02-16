@@ -33,9 +33,14 @@ import { IAComponent } from './components/info/ia/ia.component';
 import { FCComponent } from './components/info/fc/fc.component';
 import { BSComponent } from './components/info/bs/bs.component';
 import { BCComponent } from './components/info/bc/bc.component';
+import {DataService} from './services/data.service';
+import {DataImplServiceService} from './services/data-impl-service.service';
+import {EcharMapService} from './services/echar-map.service';
+import {EcharMapImplService} from './services/echar-map-impl.service';
 
 registerLocaleData(zh);
 
+// @ts-ignore
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,7 +78,11 @@ registerLocaleData(zh);
     ReactiveFormsModule,
     NgxEchartsModule
   ],
-  providers: [{ provide: NZ_I18N, useValue: zh_CN }],
+  providers: [
+    { provide: NZ_I18N, useValue: zh_CN },
+    { provide: DataService, useClass: DataImplServiceService},
+    { provide: EcharMapService, useClass: EcharMapImplService}
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

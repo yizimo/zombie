@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-single',
@@ -10,6 +10,8 @@ export class SingleComponent implements OnInit {
   current = 0;
 
   index = 0;
+
+
 
   // 返回上一步
   pre(): void {
