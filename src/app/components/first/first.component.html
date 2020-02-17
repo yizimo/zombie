@@ -1,0 +1,18 @@
+<nz-row [nzGutter]="16" style="margin-top: 10px">
+  <nz-col [nzSpan]="22" [nzPush]=1>
+    <nz-button-group >
+      <button nz-button routerLink="/first/single" routerLinkActive="active">单个</button>
+      <button nz-button routerLink="/first/more" routerLinkActive="active">多个</button>
+      <button nz-button style="float: right;">判定</button>
+
+    </nz-button-group>
+
+  </nz-col>
+  <nz-col [nzSpan]="22" [nzPush]=1>
+    <div class="inner-content">
+      <router-outlet></router-outlet>
+    </div>
+
+  </nz-col>
+</nz-row>
+

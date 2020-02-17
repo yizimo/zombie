@@ -24,4 +24,9 @@ export abstract class EcharMapService {
    * 行业饼状图
    */
   abstract getEcharByPie();
+
+  /**
+   * 族谱
+   */
+  abstract getEcharByRelate();
 }

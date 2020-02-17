@@ -37,6 +37,8 @@ import {DataService} from './services/data.service';
 import {DataImplServiceService} from './services/data-impl-service.service';
 import {EcharMapService} from './services/echar-map.service';
 import {EcharMapImplService} from './services/echar-map-impl.service';
+import {InfoService} from './services/info.service';
+import {InfoImplService} from './services/info-impl.service';
 
 registerLocaleData(zh);
 
@@ -81,7 +83,8 @@ registerLocaleData(zh);
   providers: [
     { provide: NZ_I18N, useValue: zh_CN },
     { provide: DataService, useClass: DataImplServiceService},
-    { provide: EcharMapService, useClass: EcharMapImplService}
+    { provide: EcharMapService, useClass: EcharMapImplService},
+    { provide: InfoService, useClass: InfoImplService}
     ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,53 @@
+<nz-table #nestedTable [nzData]="listOfParentResult" [nzPageSize]="10" [nzShowPagination]="false">
+  <thead>
+    <tr>
+      <th nzShowExpand></th>
+      <th>数量</th>
+      <th>状态</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-template ngFor let-data [ngForOf]="nestedTable.data">
+      <tr>
+        <td nzShowExpand [(nzExpand)]="data.expand"></td>
+        <td>{{ data.id }}</td>
+        <td>
+          <nz-badge *ngIf="data.resultSuccess == 0" [nzStatus]="'success'" [nzText]="'判定成功'"></nz-badge>
+          <nz-badge *ngIf="data.resultSuccess == 1" [nzStatus]="'processing'" [nzText]="'正在判定'"></nz-badge>
+          <nz-badge *ngIf="data.resultSuccess == 2" [nzStatus]="'error'" [nzText]="'判定失败'"></nz-badge>
+        </td>
+
+      </tr>
+      <tr [nzExpand]="data.expand">
+        <td></td>
+        <td colspan="2">
+          <nz-table #innerTable [nzData]="data.resultSuccess == 0 ? listOfChildrenResultSuccess : (
+          data.resultSuccess == 1 ? listOfChildrenResultWait : listOfChildrenResultError)"
+                    nzSize="middle" [nzShowPagination]="false">
+            <thead>
+              <tr>
+                <th>企业ID</th>
+                <th>是否为僵尸企业</th>
+                <th>预警级别</th>
+                <th>整改建议</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of innerTable.data">
+                <td>{{ data.componyId }}</td>
+                <td *ngIf="data.flag">{{ data.flag == true ? '是' : '否' }}</td>
+                <td *ngIf="data.advice">
+                  <nz-badge  [nzStatus]="'success'" [nzText]="'Finished'"></nz-badge>
+                </td>
+                <td>{{ data.advice }}</td>
+                <td>
+
+                </td>
+              </tr>
+            </tbody>
+          </nz-table>
+        </td>
+      </tr>
+    </ng-template>
+  </tbody>
+</nz-table>

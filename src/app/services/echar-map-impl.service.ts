@@ -25,4 +25,7 @@ export class EcharMapImplService extends EcharMapService {
   getEcharByPie() {
     return this.http.get(this.dataUrl + '/get_trade_pie_chart_data');
   }
+  getEcharByRelate() {
+    return this.http.get(this.dataUrl + '/getRelation');
+  }
 }
