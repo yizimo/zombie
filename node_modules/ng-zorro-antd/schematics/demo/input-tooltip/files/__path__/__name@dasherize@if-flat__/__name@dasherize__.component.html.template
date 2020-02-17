@@ -1,0 +1,16 @@
+
+    <input
+      #inputElement
+      style="width: 120px"
+      nz-input
+      nz-tooltip
+      nzTrigger="focus"
+      nzPlacement="topLeft"
+      nzOverlayClassName="numeric-input"
+      [ngModel]="value"
+      [nzTitle]="title"
+      placeholder="Input a number"
+      (ngModelChange)="onChange($event)"
+      (blur)="onBlur()"
+    />
+  

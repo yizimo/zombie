@@ -1,0 +1,30 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: '<%= selector %>',
+  <% if(inlineTemplate) { %>template: `
+    <nz-select nzShowSearch nzAllowClear [ngModel]="'lucy'" [nzDropdownRender]="render">
+      <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+      <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+    </nz-select>
+    <ng-template #render>
+      <nz-divider></nz-divider>
+      <div class="add-item"><i nz-icon nzType="plus"></i> Add item</div>
+    </ng-template>
+  `<% } else { %>templateUrl: './<%= dasherize(name) %>.component.html'<% } %>,
+  <% if(inlineStyle) { %>styles: [`
+      nz-select {
+        width: 120px;
+      }
+
+      nz-divider {
+        margin: 4px 0;
+      }
+
+      .add-item {
+        padding: 8px;
+        cursor: pointer;
+      }
+    `]<% } else { %>styleUrls: ['./<%= dasherize(name) %>.component.<%= style %>']<% } %>
+})
+export class <%= classify(name) %>Component {}
