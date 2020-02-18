@@ -39,10 +39,12 @@ import {EcharMapService} from './services/echar-map.service';
 import {EcharMapImplService} from './services/echar-map-impl.service';
 import {InfoService} from './services/info.service';
 import {InfoImplService} from './services/info-impl.service';
+import { ChainTableComponent } from './components/show-echarts/chain-table/chain-table.component';
+import { ChainMapComponent } from './components/show-echarts/chain-map/chain-map.component';
+import { ChainCardComponent } from './components/show-echarts/chain-card/chain-card.component';
+import { ChainBarComponent } from './components/show-echarts/chain-bar/chain-bar.component';
 
 registerLocaleData(zh);
-
-// @ts-ignore
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,7 +70,11 @@ registerLocaleData(zh);
     IAComponent,
     FCComponent,
     BSComponent,
-    BCComponent
+    BCComponent,
+    ChainTableComponent,
+    ChainMapComponent,
+    ChainCardComponent,
+    ChainBarComponent
   ],
   imports: [
     BrowserModule,

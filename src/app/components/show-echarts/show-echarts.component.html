@@ -1,1 +1,21 @@
-<div [options]="chartOption" (chartInit)="onChartInit($event)" class="chart-sun" echarts style="background: #cccccc;" ></div>
+<div style=" padding: 30px;">
+  <nz-row [nzGutter]="16">
+    <app-chain-card></app-chain-card>
+    <nz-col nzSpan="24">
+      <div class="inner-content" >
+        <app-chain-map *ngIf="flag % 2 == 0" ></app-chain-map>
+        <app-chain-bar *ngIf="flag % 2 == 1"></app-chain-bar>
+      </div>
+    </nz-col>
+    <nz-col nzSpan="24">
+      <div class="inner-content">
+        <app-chain-table></app-chain-table>
+      </div>
+    </nz-col>
+    <nz-col nzSpan="24">
+      <div class="inner-content" style="min-height: 100px">
+        <div>aaaaaaa</div>
+      </div>
+    </nz-col>
+  </nz-row>
+</div>

@@ -2,23 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Result} from '../../../kind/result';
 import {ResultSum} from '../../../kind/result-sum';
 
-interface ParentItemData {
-  key: number;
-  name: string;
-  platform: string;
-  version: string;
-  upgradeNum: number | string;
-  creator: string;
-  createdAt: string;
-  expand: boolean;
-}
 
-interface ChildrenItemData {
-  key: number;
-  name: string;
-  date: string;
-  upgradeNum: string;
-}
 
 
 @Component({

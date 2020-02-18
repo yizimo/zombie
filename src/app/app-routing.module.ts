@@ -42,6 +42,9 @@ const routes: Routes = [
     path: 'info', component: InfoComponent
   },
   {
+    path: 'china', component: ShowEchartsComponent
+  },
+  {
     path: '**', redirectTo: 'first/single'
   }
 
