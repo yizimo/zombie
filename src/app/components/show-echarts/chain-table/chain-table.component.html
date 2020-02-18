@@ -1,0 +1,33 @@
+<nz-table #expandTable [nzData]="listVince">
+  <thead>
+  <tr>
+    <th >地区</th>
+    <th >现存僵尸企业</th>
+    <th >累计僵尸企业</th>
+    <th >已兼并重组</th>
+    <th >已破产</th>
+    <th >新生企业</th>
+  </tr>
+  </thead>
+  <tbody>
+  <ng-container *ngFor="let data of expandTable.data">
+    <ng-container *ngFor="let item of mapOfExpandedData[data.id]">
+      <tr *ngIf="(item.parent && item.parent.expand) || !item.parent">
+        <td
+          [nzIndentSize]="item.level * 20"
+          [nzShowExpand]="!!item.listVin"
+          [(nzExpand)]="item.expand"
+          (nzExpandChange)="collapse(mapOfExpandedData[data.id], item, $event)"
+        >
+          {{ item.name }}
+        </td>
+        <td>{{ item.isZombie }}</td>
+        <td>{{ item.notIsZombie }}</td>
+        <td>{{ item.isRestruct }}</td>
+        <td>{{ item.isBrankruptcy }}</td>
+        <td>{{ item.isNew }}</td>
+      </tr>
+    </ng-container>
+  </ng-container>
+  </tbody>
+</nz-table>

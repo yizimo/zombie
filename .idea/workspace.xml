@@ -2,13 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d95235a5-d759-4bf5-8601-88c6e2983c24" name="Default Changelist" comment="画像">
+      <change afterPath="$PROJECT_DIR$/src/app/components/show-echarts/chain-bar/chain-bar.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/show-echarts/chain-bar/chain-bar.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/show-echarts/chain-bar/chain-bar.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/show-echarts/chain-bar/chain-bar.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/show-echarts/chain-card/chain-card.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/show-echarts/chain-card/chain-card.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/show-echarts/chain-card/chain-card.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/show-echarts/chain-card/chain-card.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/show-echarts/chain-map/chain-map.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/show-echarts/chain-map/chain-map.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/show-echarts/chain-map/chain-map.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/show-echarts/chain-map/chain-map.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/show-echarts/chain-table/chain-table.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/show-echarts/chain-table/chain-table.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/show-echarts/chain-table/chain-table.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/show-echarts/chain-table/chain-table.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/result/tabl/tabl.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/result/tabl/tabl.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/show-echarts/show-echarts.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/show-echarts/show-echarts.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/show-echarts/show-echarts.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/show-echarts/show-echarts.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +117,7 @@
       <workItem from="1581433603154" duration="3808000" />
       <workItem from="1581488151794" duration="561000" />
       <workItem from="1581668083459" duration="384000" />
-      <workItem from="1581758650534" duration="35923000" />
+      <workItem from="1581758650534" duration="36208000" />
     </task>
     <task id="LOCAL-00001" summary="前端">
       <created>1581252588259</created>
@@ -192,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581930591017</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="画像">
+      <created>1582037114972</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1582037114972</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,10 +246,10 @@
       <screen x="0" y="23" width="1440" height="816" />
     </state>
     <state x="458" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.816@0.23.1440.816" timestamp="1581835514100" />
-    <state x="313" y="38" key="CommitChangelistDialog2" timestamp="1582037075339">
+    <state x="313" y="38" key="CommitChangelistDialog2" timestamp="1582037166046">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state x="313" y="38" key="CommitChangelistDialog2/0.23.1440.821@0.23.1440.821" timestamp="1582037075339" />
+    <state x="313" y="38" key="CommitChangelistDialog2/0.23.1440.821@0.23.1440.821" timestamp="1582037166046" />
     <state x="313" y="38" key="CommitChangelistDialog2/0.23.1440.822@0.23.1440.822" timestamp="1581929643845" />
     <state x="313" y="38" key="CommitChangelistDialog2/0.23.1440.823@0.23.1440.823" timestamp="1581254597179" />
     <state x="101" y="123" width="1240" height="616" key="DiffContextDialog" timestamp="1581922527684">

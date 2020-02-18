@@ -3,7 +3,7 @@
     <app-chain-card></app-chain-card>
     <nz-col nzSpan="24">
       <div class="inner-content" >
-        <app-chain-map *ngIf="flag % 2 == 0" ></app-chain-map>
+        <app-chain-map *ngIf="flag % 2 == 0" [changeFlag]="changFlag" ></app-chain-map>
         <app-chain-bar *ngIf="flag % 2 == 1"></app-chain-bar>
       </div>
     </nz-col>
