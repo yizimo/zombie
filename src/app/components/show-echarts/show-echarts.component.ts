@@ -12,15 +12,17 @@ import {EcharMapService} from '../../services/echar-map.service';
 })
 export class ShowEchartsComponent implements OnInit {
 
-  flag: number;
+  flag = 0;
 
-  ngOnInit(): void {
-    this.flag = 0;
+  constructor() {
   }
 
-  changFlag() {
-    // tslint:disable-next-line:triple-equals
-   this.flag ++;
-   alert(this.flag);
+  ngOnInit() {
   }
+
+  getFalg() {
+    this.flag++;
+  }
+
+
 }

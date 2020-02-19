@@ -2,6 +2,8 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {EcharMapService} from '../../../services/echar-map.service';
 import {ShowEchartsComponent} from '../show-echarts.component';
 
+
+
 @Component({
   selector: 'app-chain-map',
   templateUrl: './chain-map.component.html',
@@ -9,10 +11,8 @@ import {ShowEchartsComponent} from '../show-echarts.component';
 })
 export class ChainMapComponent implements OnInit {
 
-  @Input() changeFlag: any;
-
+  flag = 0;
   chinaMapList: any = [];
-
   echartInstance: any;
 
   chartOption = {
@@ -33,10 +33,16 @@ export class ChainMapComponent implements OnInit {
           show: true,
           title: '柱状图',
           // tslint:disable-next-line:max-line-length
-          icon: 'path://M432.45,595.444c0,2.177-4.661,6.82-11.305,6.82c-6.475,0-11.306-4.567-11.306-6.82s4.852-6.812,11.306-6.812C427.841,588.632,432.452,593.191,432.45,595.444L432.45,595.444z M421.155,589.876c-3.009,0-5.448,2.495-5.448,5.572s2.439,5.572,5.448,5.572c3.01,0,5.449-2.495,5.449-5.572C426.604,592.371,424.165,589.876,421.155,589.876L421.155,589.876z M421.146,591.891c-1.916,0-3.47,1.589-3.47,3.549c0,1.959,1.554,3.548,3.47,3.548s3.469-1.589,3.469-3.548C424.614,593.479,423.062,591.891,421.146,591.891L421.146,591.891zM421.146,591.891',
-          onclick() {
-             // @ts-ignore
-            // new ChainMapComponent().getFlag();
+          icon: 'path://M432.45,595.444c0,2.177-4.661,6.82-11.305,6.82c-6.475,0-11.306-4.' +
+            '567-11.306-6.82s4.852-6.812,11.306-6.812C427.841,588.632,432.452,593.191,432.' +
+            '45,595.444L432.45,595.444z M421.155,589.876c-3.009,0-5.448,2.495-5.448,' +
+            '5.572s2.439,5.572,5.448,5.572c3.01,0,5.449-2.495,5.449-5.572C426.604,592.371,' +
+            '424.165,589.876,421.155,589.876L421.155,589.876z M421.146,591.891c-1.916,0-3.47,' +
+            '1.589-3.47,3.549c0,1.959,1.554,3.548,3.47,3.548s3.469-1.589,3.469-3.548C424.614,' +
+            '593.479,423.062,591.891,421.146,591.891L421.146,591.891zM421.146,591.891',
+          // tslint:disable-next-line:only-arrow-functions
+          onclick: () => {
+            this.getFlag(1);
           }
         }
       }
@@ -67,12 +73,74 @@ export class ChainMapComponent implements OnInit {
     }]
   };
 
+  barOption = {
+    backgroundColor: '#FFFFFF',
+    title: {
+      text: '分布数量图 '
+    },
+    toolbox: {
+      feature: {
+        myTool2:  {
+          show: true,
+          title: '地图',
+          // tslint:disable-next-line:max-line-length
+          icon: 'path://M432.45,595.444c0,2.177-4.661,6.82-11.305,6.82c-6.475,0-11.306-4.' +
+          '567-11.306-6.82s4.852-6.812,11.306-6.812C427.841,588.632,432.452,593.191,432.' +
+          '45,595.444L432.45,595.444z M421.155,589.876c-3.009,0-5.448,2.495-5.448,' +
+          '5.572s2.439,5.572,5.448,5.572c3.01,0,5.449-2.495,5.449-5.572C426.604,592.371,' +
+          '424.165,589.876,421.155,589.876L421.155,589.876z M421.146,591.891c-1.916,0-3.47,' +
+          '1.589-3.47,3.549c0,1.959,1.554,3.548,3.47,3.548s3.469-1.589,3.469-3.548C424.614,' +
+          '593.479,423.062,591.891,421.146,591.891L421.146,591.891zM421.146,591.891',
+          // tslint:disable-next-line:only-arrow-functions
+          onclick: () => {
+            this.getFlag(0);
+          }
+        }
+      }
+    },
+    color: ['#3398DB'],
+    tooltip: {
+      trigger: 'axis',
+      axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+        type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+      }
+    },
+    grid: {
+      left: '3%',
+      right: '4%',
+      bottom: '3%',
+      containLabel: true
+    },
+    xAxis: [
+      {
+        type: 'category',
+        data: ['河南', '北京', '陕西', '湖南', '湖北', '山西', '山东'],
+        axisTick: {
+          alignWithLabel: true
+        }
+      }
+    ],
+    yAxis: [
+      {
+        type: 'value'
+      }
+    ],
+    series: [
+      {
+        name: '僵尸企业',
+        type: 'bar',
+        barWidth: '30%',
+        data: [10, 52, 200, 334, 390, 330, 220]
+      }
+    ]
+  };
+
   constructor(private echarMapService: EcharMapService) {
   }
 
   ngOnInit() {
-
     // this.getChinaMap();
+
   }
 
   getChinaMap() {
@@ -98,16 +166,24 @@ export class ChainMapComponent implements OnInit {
 
   resizeChart() {
     if (this.echartInstance) {
-      console.log(this.chartOption);
       this.echartInstance.setOption(this.chartOption, true);
 
     }
   }
-
-  getFlag() {
-    alert(1);
-    this.changeFlag();
+  resizeByChainOrBar(flag) {
+    if (this.echartInstance) {
+      console.log(flag % 2 === 0);
+      if (flag % 2 === 0) {
+        this.echartInstance.setOption(this.chartOption, true);
+      } else if (flag % 2 === 1) {
+        this.echartInstance.setOption(this.barOption, true);
+      }
+    }
   }
 
+  getFlag(flag) {
+    this.flag++;
+    this.resizeByChainOrBar(this.flag);
+  }
 
 }

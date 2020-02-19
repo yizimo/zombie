@@ -1,13 +1,12 @@
 <div style=" padding: 30px;">
   <nz-row [nzGutter]="16">
-    <app-chain-card></app-chain-card>
-    <nz-col nzSpan="24">
+    <app-chain-card ></app-chain-card>
+    <nz-col nzSpan="24" style="padding-left: 0px !important; padding-right: 8px;">
       <div class="inner-content" >
-        <app-chain-map *ngIf="flag % 2 == 0" [changeFlag]="changFlag" ></app-chain-map>
-        <app-chain-bar *ngIf="flag % 2 == 1"></app-chain-bar>
+        <app-chain-map  ></app-chain-map>
       </div>
     </nz-col>
-    <nz-col nzSpan="24">
+    <nz-col nzSpan="24" style="padding-left: 0px !important; padding-right: 0px;">
       <div class="inner-content">
         <app-chain-table></app-chain-table>
       </div>

@@ -1,1 +1,5 @@
-<div echarts [options]="relationOption" (chartInit)="onEchartInit($event)" (chartClick)="getBig($event) " style="min-height: 800px"   > </div>
+<div style=" padding: 30px;">
+  <nz-row [nzGutter]="16">
+    <div echarts [options]="relationOption" (chartInit)="onEchartInit($event)" (chartClick)="getBig($event) " style="min-height: 800px"   > </div>
+  </nz-row>
+</div>

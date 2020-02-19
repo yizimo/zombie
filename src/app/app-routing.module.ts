@@ -14,6 +14,7 @@ import {BIComponent} from './components/info/bi/bi.component';
 import {FCComponent} from './components/info/fc/fc.component';
 import {BSComponent} from './components/info/bs/bs.component';
 import {BCComponent} from './components/info/bc/bc.component';
+import {EchartRelationComponent} from './components/echart-relation/echart-relation.component';
 
 const routes: Routes = [
   {
@@ -33,7 +34,7 @@ const routes: Routes = [
     path: 'data', component: DataComponent
   },
   {
-    path: 'show', component: ShowEchartsComponent
+    path: 'relation', component: EchartRelationComponent
   },
   {
     path: 'echartts', component: EcharttsComponent

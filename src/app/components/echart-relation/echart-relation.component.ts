@@ -26,24 +26,12 @@ export class EchartRelationComponent implements OnInit {
         {name: '商品服务业'},
         {name: '社区服务'}]
     },
-    toolbox: {
-      feature: {
-        myTool2:  {
-          show: true,
-          title: 'lala',
-          // tslint:disable-next-line:max-line-length
-          icon: 'path://M432.45,595.444c0,2.177-4.661,6.82-11.305,6.82c-6.475,0-11.306-4.567-11.306-6.82s4.852-6.812,11.306-6.812C427.841,588.632,432.452,593.191,432.45,595.444L432.45,595.444z M421.155,589.876c-3.009,0-5.448,2.495-5.448,5.572s2.439,5.572,5.448,5.572c3.01,0,5.449-2.495,5.449-5.572C426.604,592.371,424.165,589.876,421.155,589.876L421.155,589.876z M421.146,591.891c-1.916,0-3.47,1.589-3.47,3.549c0,1.959,1.554,3.548,3.47,3.548s3.469-1.589,3.469-3.548C424.614,593.479,423.062,591.891,421.146,591.891L421.146,591.891zM421.146,591.891',
-          onclick() {
-            // @ts-ignore
-            new EchartRelationComponent().getBig(1);
-          }
-        }
-      }
-    },
     series: [{
       type: 'graph',
       layout: 'force',
       animation: false,
+      roam: true,
+      focusNodeAdjacency: true,
       label: {
         position: 'right',
         formatter: '{b}:{c}',
@@ -65,7 +53,6 @@ export class EchartRelationComponent implements OnInit {
         {name: '商品服务业'},
         {name: '社区服务'}],
       force: {
-        edgeLength: 5,
         repulsion: 1000,
         gravity: 0.2
       },
@@ -80,8 +67,8 @@ export class EchartRelationComponent implements OnInit {
   }
 
   getBig(event) {
+    console.log(event.data.id);
     this.router.navigateByUrl('/info');
-    console.log(event.data.target);
   }
   getInfo() {
     this.echarMapService.getEcharByRelate().subscribe(data => {
@@ -92,6 +79,8 @@ export class EchartRelationComponent implements OnInit {
       this.relationOption.series.push({
         type: 'graph',
         layout: 'force',
+        focusNodeAdjacency: true,
+        roam: true,
         animation: false,
         label: {
           position: 'right',
@@ -114,7 +103,6 @@ export class EchartRelationComponent implements OnInit {
           {name: '商品服务业'},
           {name: '社区服务'}],
         force: {
-          edgeLength: 5,
           repulsion: 1000,
           gravity: 0.2
         },
