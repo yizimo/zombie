@@ -1,62 +1,21 @@
-<form nz-form>
-  <div nz-row [nzGutter]="24">
-    <div nz-col [nzSpan]="8" [nzPush]=2>
-      <nz-form-item nzFlex>
-        <nz-form-label >企业名称(ID)</nz-form-label>
-        <nz-form-control>
-          {{ _id }}
-        </nz-form-control>
-      </nz-form-item>
+<div class="content">
+  <div class="extra">
+    <div>
+      <img
+        src="https://gw.alipayobjects.com/mdn/mpaas_user/afts/img/A*KsfVQbuLRlYAAAAAAAAAAABjAQAAAQ/original"
+        alt="content"
+      />
     </div>
-    <div nz-col [nzSpan]="8" [nzPush]=2>
-      <nz-form-item nzFlex>
-        <nz-form-label >注册时间</nz-form-label>
-        <nz-form-control>
-          1
-        </nz-form-control>
-      </nz-form-item>
-    </div>
-    <div nz-col [nzSpan]="8" [nzPush]=2>
-      <nz-form-item nzFlex>
-        <nz-form-label >行业</nz-form-label>
-        <nz-form-control>
-          1
-        </nz-form-control>
-      </nz-form-item>
-    </div>
-    <div nz-col [nzSpan]="8" [nzPush]=2>
-      <nz-form-item nzFlex>
-        <nz-form-label >区域</nz-form-label>
-        <nz-form-control>
-          1
-        </nz-form-control>
-      </nz-form-item>
-    </div>
-    <div nz-col [nzSpan]="8" [nzPush]=2>
-      <nz-form-item nzFlex>
-        <nz-form-label >企业类型</nz-form-label>
-        <nz-form-control>
-          1
-        </nz-form-control>
-      </nz-form-item>
-    </div>
-    <div nz-col [nzSpan]="8" [nzPush]=2>
-      <nz-form-item nzFlex>
-        <nz-form-label >控制人类型</nz-form-label>
-        <nz-form-control>
-          1
-        </nz-form-control>
-      </nz-form-item>
-    </div>
-    <div nz-col [nzSpan]="8" [nzPush]=2>
-      <nz-form-item nzFlex>
-        <nz-form-label >控制人持股</nz-form-label>
-        <nz-form-control>
-          1
-        </nz-form-control>
-      </nz-form-item>
-    </div>
-
   </div>
-</form>
-
+  <div class="main">
+    <nz-descriptions [nzColumn]="7">
+      <nz-descriptions-item nzTitle="企业名称" [nzSpan]="1" >zimo</nz-descriptions-item>
+      <nz-descriptions-item nzTitle="行业" [nzSpan]="6"><a>421421</a></nz-descriptions-item>
+      <nz-descriptions-item nzTitle="地区" [nzSpan]="1">北京</nz-descriptions-item>
+      <nz-descriptions-item nzTitle="注册时间" [nzSpan]="6">2017-10-10</nz-descriptions-item>
+      <nz-descriptions-item nzTitle="企业类型" [nzSpan]="1">1</nz-descriptions-item>
+      <nz-descriptions-item nzTitle="控制人类型" [nzSpan]="1">1</nz-descriptions-item>
+      <nz-descriptions-item nzTitle="控制人持股" [nzSpan]="1">1</nz-descriptions-item>
+    </nz-descriptions>
+  </div>
+</div>

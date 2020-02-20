@@ -2,6 +2,7 @@
 .table-operations {
 
   margin-bottom: 16px;
+  padding-bottom: 28px;
 
 }
 
@@ -9,5 +10,32 @@ nz-page-header {
   margin-top: 16px;
   border: 1px solid rgb(235, 237, 240);
   background: #ffffff;
-  min-height: 500px;
+  min-height: 200px;
+}
+.content {
+  display: flex;
+}
+.extra > div {
+  display: flex;
+  width: max-content;
+  justify-content: flex-end;
+}
+@media (max-width: 576px) {
+  .content {
+    display: block;
+  }
+
+  .main {
+    width: 100%;
+    margin-bottom: 12px;
+    text-align: right;
+
+  }
+
+  .extra {
+    width: 100%;
+    margin-left: 0;
+    text-align: left;
+
+  }
 }

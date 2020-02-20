@@ -1,25 +1,34 @@
-<div nz-row nzGutter="16" class="table-operations">
+<div nz-row nzGutter="16" class="table-operations" >
 
-  <nz-page-header nz-col class="gutter-row" nzSpan="22" [nzPush]=1 nzBackIcon>
+  <nz-page-header class="inner-content" nz-col class="gutter-row" nzSpan="22" [nzPush]=1 nzBackIcon>
     <nz-page-header-title>企业全息画像</nz-page-header-title>
-    <nz-page-header-footer>
-      <nz-tabset [nzSelectedIndex]="0">
-        <nz-tab nzTitle="基本信息" >
-          <app-bi [id]="info"></app-bi>
-        </nz-tab>
-        <nz-tab nzTitle="无形资产" >
-          <app-ia></app-ia>
-        </nz-tab>
-        <nz-tab nzTitle="融资渠道" >
-          <app-fc></app-fc>
-        </nz-tab>
-        <nz-tab nzTitle="资产负债" >
-          <app-bs></app-bs>
-        </nz-tab>
-        <nz-tab nzTitle="营业情况" >
-          <app-bc></app-bc>
-        </nz-tab>
-      </nz-tabset>
-    </nz-page-header-footer>
+      <nz-page-header-content>
+        <app-bi></app-bi>
+      </nz-page-header-content>
+
   </nz-page-header>
+  <nz-layout class="inner-content" style="background: #fff; margin-top: 16px;" nz-col class="gutter-row" nzSpan="22" [nzPush]=1 >
+    <nz-header style="background: #fff; text-align: center">
+        aaaaa
+    </nz-header>
+    <nz-content>
+      <ul nz-menu nzMode="horizontal">
+        <li nz-menu-item nzSelected routerLink="/info/ia">
+          无形资产
+        </li>
+        <li nz-menu-item routerLink="/info/fc">
+          融资渠道
+        </li>
+        <li nz-menu-item routerLink="/info/bs">
+          资产负债
+        </li>
+        <li nz-menu-item routerLink="/info/bc">
+          营业情况
+        </li>
+      </ul>
+      <div style="min-height: 200px">
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+  </nz-layout>
 </div>

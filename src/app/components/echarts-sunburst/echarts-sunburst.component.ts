@@ -19,8 +19,8 @@ export class EchartsSunburstComponent implements OnInit {
       text: '旭日图'
     },
     tooltip: {
-    trigger: 'item',
-    formatter: '{b}: {c}'
+      trigger: 'item',
+      formatter: '{b}: {c}'
   },
     visualMap: {
       type: 'continuous',

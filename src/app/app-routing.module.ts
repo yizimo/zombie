@@ -40,7 +40,13 @@ const routes: Routes = [
     path: 'echartts', component: EcharttsComponent
   },
   {
-    path: 'info', component: InfoComponent
+    path: 'info', component: InfoComponent,
+    children: [
+      { path: 'bc', component: BCComponent},
+      { path: 'bs', component: BSComponent},
+      { path: 'fc', component: FCComponent},
+      { path: 'ia', component: IAComponent}
+    ]
   },
   {
     path: 'china', component: ShowEchartsComponent

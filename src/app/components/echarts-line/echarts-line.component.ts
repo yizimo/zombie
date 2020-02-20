@@ -38,7 +38,7 @@ export class EchartsLineComponent implements OnInit {
     xAxis: {
       type: 'category',
       boundaryGap: false,
-      data: ['2015', '2016', '2017']
+      data: ['2015', '2016', '2017', '2018']
     },
     yAxis: {
       type: 'value'
@@ -77,5 +77,9 @@ export class EchartsLineComponent implements OnInit {
       this.plotChart.setOption(this.lineOption, true);
 
     }
+  }
+
+  getDemo(event) {
+    console.log(event);
   }
 }
