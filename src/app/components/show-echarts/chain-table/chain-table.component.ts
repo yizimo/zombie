@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {EcharMapService} from '../../../services/echar-map.service';
 
 
 class Vince {
@@ -245,11 +246,20 @@ export class ChainTableComponent implements OnInit {
     }
   ];
   mapOfExpandedData: { [key: string]: Vince[] } = {};
-  constructor() { }
+  constructor(private echarMapService: EcharMapService) { }
 
   ngOnInit() {
-    this.listVince.forEach(item => {
-      this.mapOfExpandedData[item.id] = this.convertTreeToList(item);
+    this.getEchartByChinaTable();
+    console.log(this.listVince);
+  }
+
+  getEchartByChinaTable() {
+    this.echarMapService.getEchartByChinaTable().subscribe(data => {
+      console.log(data.data.china_table_chart);
+      this.listVince = data.data.china_table_chart;
+      this.listVince.forEach(item => {
+        this.mapOfExpandedData[item.id] = this.convertTreeToList(item);
+      });
     });
   }
 

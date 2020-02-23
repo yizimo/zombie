@@ -1,6 +1,6 @@
 <div nz-row nzGutter="16" class="table-operations" >
 
-  <nz-page-header class="inner-content" nz-col class="gutter-row" nzSpan="22" [nzPush]=1 nzBackIcon>
+  <nz-page-header (nzBack)="goBack()" class="inner-content" nz-col class="gutter-row" nzSpan="22" [nzPush]=1 nzBackIcon>
     <nz-page-header-title>企业全息画像</nz-page-header-title>
       <nz-page-header-content>
         <app-bi></app-bi>
@@ -13,16 +13,16 @@
     </nz-header>
     <nz-content>
       <ul nz-menu nzMode="horizontal">
-        <li nz-menu-item nzSelected routerLink="/info/ia">
+        <li nz-menu-item nzSelected routerLink="./ia">
           无形资产
         </li>
-        <li nz-menu-item routerLink="/info/fc">
+        <li nz-menu-item routerLink="./fc">
           融资渠道
         </li>
-        <li nz-menu-item routerLink="/info/bs">
+        <li nz-menu-item routerLink="./bs">
           资产负债
         </li>
-        <li nz-menu-item routerLink="/info/bc">
+        <li nz-menu-item routerLink="./bc">
           营业情况
         </li>
       </ul>

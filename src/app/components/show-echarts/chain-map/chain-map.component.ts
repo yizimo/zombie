@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {EcharMapService} from '../../../services/echar-map.service';
 import {ShowEchartsComponent} from '../show-echarts.component';
+import {ActivatedRoute} from '@angular/router';
 
 
 
@@ -14,7 +15,9 @@ export class ChainMapComponent implements OnInit {
   flag = 0;
   chinaMapList: any = [];
   echartInstance: any;
+  barMapList: any = [];
 
+  // 地图
   chartOption = {
     backgroundColor: '#FFFFFF',
     title: {
@@ -73,6 +76,7 @@ export class ChainMapComponent implements OnInit {
     }]
   };
 
+  // 柱状图
   barOption = {
     backgroundColor: '#FFFFFF',
     title: {
@@ -101,8 +105,11 @@ export class ChainMapComponent implements OnInit {
     color: ['#3398DB'],
     tooltip: {
       trigger: 'axis',
-      axisPointer: {            // 坐标轴指示器，坐标轴触发有效
-        type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+      axisPointer: {
+        type: 'shadow',
+        label: {
+          show: true
+        }
       }
     },
     grid: {
@@ -114,7 +121,8 @@ export class ChainMapComponent implements OnInit {
     xAxis: [
       {
         type: 'category',
-        data: ['河南', '北京', '陕西', '湖南', '湖北', '山西', '山东'],
+        // tslint:disable-next-line:only-arrow-functions
+        data: null,
         axisTick: {
           alignWithLabel: true
         }
@@ -130,22 +138,24 @@ export class ChainMapComponent implements OnInit {
         name: '僵尸企业',
         type: 'bar',
         barWidth: '30%',
-        data: [10, 52, 200, 334, 390, 330, 220]
+        // tslint:disable-next-line:only-arrow-functions
+        data: null
       }
     ]
   };
 
-  constructor(private echarMapService: EcharMapService) {
+  constructor(private echarMapService: EcharMapService, private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit() {
-    // this.getChinaMap();
-
+    this.getChinaMap();
+    console.log(11111);
   }
 
   getChinaMap() {
     this.echarMapService.getEcharByChinaMap().subscribe(data => {
       this.chinaMapList = data.data.area_chart;
+      this.barMapList = data.data.area_chart;
       console.log(this.chinaMapList);
       this.chartOption.series.push({
         name: '地图展示',
@@ -156,6 +166,22 @@ export class ChainMapComponent implements OnInit {
         },
         data: this.chinaMapList
       });
+      this.barOption.xAxis.push({
+        axisTick: undefined, type: 'category',
+        // tslint:disable-next-line:only-arrow-functions
+        data:  this.barMapList.map(function(a) {
+          return a.name;
+        })
+      });
+      this.barOption.series.push({
+        name: '僵尸企业',
+        type: 'bar',
+        barWidth: '30%',
+        // tslint:disable-next-line:only-arrow-functions
+        data: this.barMapList.map(function(a) {
+          return a.value;
+        })
+      });
     });
     this.resizeChart();
   }
@@ -165,14 +191,12 @@ export class ChainMapComponent implements OnInit {
   }
 
   resizeChart() {
-    if (this.echartInstance) {
+      console.log('更新视图');
       this.echartInstance.setOption(this.chartOption, true);
-
-    }
   }
   resizeByChainOrBar(flag) {
     if (this.echartInstance) {
-      console.log(flag % 2 === 0);
+    //  console.log(flag % 2 === 0);
       if (flag % 2 === 0) {
         this.echartInstance.setOption(this.chartOption, true);
       } else if (flag % 2 === 1) {

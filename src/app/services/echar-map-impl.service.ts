@@ -16,6 +16,9 @@ export class EcharMapImplService extends EcharMapService {
   getEcharByChinaMap() {
     return this.http.get(this.dataUrl + '/get_area_chart_data');
   }
+  getEchartByChinaTable() {
+    return this.http.get(this.dataUrl + '/get_chart_china_table');
+  }
   getEcharByPlot() {
     return this.http.get(this.dataUrl + '/get_trade_plot_chart_data');
   }
@@ -27,5 +30,8 @@ export class EcharMapImplService extends EcharMapService {
   }
   getEcharByRelate() {
     return this.http.get(this.dataUrl + '/getRelation');
+  }
+  getEchartByPipAndName(name: string) {
+    return this.http.get(this.dataUrl + '/get_echart_pip_name?name=' + name);
   }
 }

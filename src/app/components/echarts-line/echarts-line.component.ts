@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {EcharMapService} from '../../services/echar-map.service';
+import {LineAndPipService} from '../../services/line-and-pip.service';
 
 @Component({
   selector: 'app-echarts-line',
@@ -7,6 +8,8 @@ import {EcharMapService} from '../../services/echar-map.service';
   styleUrls: ['./echarts-line.component.css']
 })
 export class EchartsLineComponent implements OnInit {
+
+
 
   plotChart: any;
   listPlot: any = [] ;
@@ -46,7 +49,7 @@ export class EchartsLineComponent implements OnInit {
     series: this.listPlot
   };
 
-  constructor(private echarMapService: EcharMapService) { }
+  constructor(private echarMapService: EcharMapService, private lineAndPipService: LineAndPipService) { }
 
   ngOnInit() {
     this.getPlotData();
@@ -72,14 +75,11 @@ export class EchartsLineComponent implements OnInit {
   }
 
   resizeChart() {
-    if (this.plotChart) {
-      console.log(this.plotChart)
       this.plotChart.setOption(this.lineOption, true);
-
-    }
   }
 
   getDemo(event) {
     console.log(event);
+    this.lineAndPipService.lineToPip(event.name);
   }
 }

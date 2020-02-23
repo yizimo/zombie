@@ -68,7 +68,7 @@ export class EchartRelationComponent implements OnInit {
 
   getBig(event) {
     console.log(event.data.id);
-    this.router.navigateByUrl('/info');
+    this.router.navigate(['info', event.data.id]);
   }
   getInfo() {
     this.echarMapService.getEcharByRelate().subscribe(data => {
@@ -117,9 +117,7 @@ export class EchartRelationComponent implements OnInit {
   }
 
   resizeChart() {
-    if (this.echartRelation) {
       this.echartRelation.setOption(this.relationOption, true);
-    }
   }
 
 

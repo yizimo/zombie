@@ -11,6 +11,16 @@ export abstract class EcharMapService {
   abstract getEcharByChinaMap();
 
   /**
+   * 地图下面的图表
+   */
+  abstract getEchartByChinaTable();
+
+  /**
+   * 查找年份的
+   */
+  abstract getEchartByPipAndName(name: string);
+
+  /**
    * 行业趋势图
    */
   abstract getEcharByPlot();
