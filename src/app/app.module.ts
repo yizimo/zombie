@@ -43,6 +43,7 @@ import { ChainTableComponent } from './components/show-echarts/chain-table/chain
 import { ChainMapComponent } from './components/show-echarts/chain-map/chain-map.component';
 import { ChainCardComponent } from './components/show-echarts/chain-card/chain-card.component';
 import { ChainBarComponent } from './components/show-echarts/chain-bar/chain-bar.component';
+import {LocalStorage} from './utils/local-storage';
 
 registerLocaleData(zh);
 @NgModule({
@@ -87,6 +88,7 @@ registerLocaleData(zh);
     NgxEchartsModule
   ],
   providers: [
+    LocalStorage,
     { provide: NZ_I18N, useValue: zh_CN },
     { provide: DataService, useClass: DataImplServiceService},
     { provide: EcharMapService, useClass: EcharMapImplService},

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {GetInfoService} from '../../../services/get-info.service';
+import {LocalStorage} from '../../../utils/local-storage';
 
 @Component({
   selector: 'app-ia',
@@ -7,6 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IAComponent implements OnInit {
 
+  listData: any = [];
+  listDataEdge: any = [];
+  ecahrtIA: any;
   iaOption = {
     backgroundColor: '#FFFFFF',
     series: [{
@@ -17,7 +22,6 @@ export class IAComponent implements OnInit {
         show: true,
         position: 'right',
         formatter(param) {
-          console.log(param);
           if (param.data.value) {
             return param.data.name + ':' + param.data.value;
           } else {
@@ -25,26 +29,7 @@ export class IAComponent implements OnInit {
           }
         }
       },
-      data: [
-        {
-          name: '无形资产'
-        },
-        {
-          name: '专利',
-          value: 1,
-          category: 0
-        },
-        {
-          name: '商标',
-          value: 1,
-          category: 1
-        },
-        {
-          name: '著作权',
-          value: 1,
-          category: 2
-        }
-      ],
+      data: this.listData,
       categories: [{name: '专利'},
         {name: '商标'},
         {name: '著作权'}],
@@ -52,28 +37,59 @@ export class IAComponent implements OnInit {
         repulsion: 1000,
         gravity: 0.2
       },
-      edges: [
-        {
-          source: '无形资产',
-          target: '专利'
-        },
-        {
-          source: '无形资产',
-          target: '商标'
-        },
-        {
-          source: '无形资产',
-          target: '著作权'
-        }
-      ]
+      edges: this.listDataEdge
     }],
   };
-  constructor() { }
+  constructor(private localStorage: LocalStorage) {
+  }
 
   ngOnInit() {
+    const parse = this.localStorage.getObject('la');
+    this.listDataEdge = parse.intangible_assets.zombieMap;
+    this.listData = parse.intangible_assets.relationMaps;
+    console.log(parse);
+    this.localStorage.remove('la');
+    this.changeEchar();
+    this.resizeChart();
+  }
+
+  changeEchar() {
+    this.iaOption.series.push({
+      type: 'graph',
+      layout: 'force',
+      roam: true,
+      label: {
+        show: true,
+        position: 'right',
+        formatter(param) {
+          if (param.data.value) {
+            return param.data.name + ':' + param.data.value;
+          } else {
+            return param.data.name ;
+          }
+        }
+      },
+      data: this.listData,
+      categories: [{name: '专利'},
+        {name: '商标'},
+        {name: '著作权'}],
+      force: {
+        repulsion: 1000,
+        gravity: 0.2
+      },
+      edges: this.listDataEdge
+    });
   }
 
   onEchartInit(event) {
-
+    this.ecahrtIA = event;
   }
+
+  resizeChart() {
+    if (this.ecahrtIA) {
+      this.ecahrtIA.setOption(this.iaOption, true);
+    }
+  }
+
+
 }

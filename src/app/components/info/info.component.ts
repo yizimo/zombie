@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {InfoService} from '../../services/info.service';
 import {Location} from '@angular/common';
+import {GetInfoService} from '../../services/get-info.service';
+import {LocalStorage} from '../../utils/local-storage';
 
 @Component({
   selector: 'app-info',
@@ -12,9 +14,10 @@ export class InfoComponent implements OnInit {
 
   info: any;
   id: any;
+  data: any;
 
   constructor(private activatedRoute: ActivatedRoute,
-              private infoService: InfoService, private location: Location) { }
+              private infoService: InfoService, private location: Location, private localStorage: LocalStorage) { }
 
   ngOnInit() {
     this.getUrlParam();
@@ -24,14 +27,13 @@ export class InfoComponent implements OnInit {
   getUrlParam() {
     this.activatedRoute.params.subscribe(params => {
       this.id = params.id;
-      console.log(params);
     });
   }
 
   getInfo(id: any) {
     this.infoService.getInfo(id).subscribe(data => {
-      console.log(data);
-      this.info = data.data.company.id;
+      this.data = data.data;
+      this.getIn();
     });
   }
 
@@ -39,4 +41,7 @@ export class InfoComponent implements OnInit {
     this.location.back();
   }
 
+  getIn() {
+    this.localStorage.setObject('la', this.data);
+  }
 }

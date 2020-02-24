@@ -1,4 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {LocalStorage} from '../../../utils/local-storage';
+import {Zombie} from '../../../kind/zombie';
 
 @Component({
   selector: 'app-bi',
@@ -7,21 +9,16 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class BIComponent implements OnInit {
 
-  // tslint:disable-next-line:variable-name
-  private _id = 0;
-  constructor() { }
+  zombie: Zombie;
+  constructor(private localStorage: LocalStorage) { }
 
   ngOnInit() {
+    const parse = this.localStorage.getObject('la');
+    this.zombie = parse.page_head;
+    console.log(this.zombie.id);
+    this.localStorage.remove('la');
   }
 
-  @Input()
-  set id(id: number) {
-    this._id = id;
-  }
-
-  get id(): number {
-    return this._id;
-  }
 
 
 

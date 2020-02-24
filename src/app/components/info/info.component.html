@@ -13,16 +13,16 @@
     </nz-header>
     <nz-content>
       <ul nz-menu nzMode="horizontal">
-        <li nz-menu-item nzSelected routerLink="./ia">
+        <li nz-menu-item nzSelected (click)="getIn()" routerLink="./ia">
           无形资产
         </li>
-        <li nz-menu-item routerLink="./fc">
+        <li nz-menu-item (click)="getIn()" routerLink="./fc">
           融资渠道
         </li>
-        <li nz-menu-item routerLink="./bs">
+        <li nz-menu-item (click)="getIn()" routerLink="./bs">
           资产负债
         </li>
-        <li nz-menu-item routerLink="./bc">
+        <li nz-menu-item (click)="getIn()" routerLink="./bc">
           营业情况
         </li>
       </ul>
