@@ -44,6 +44,8 @@ import { ChainMapComponent } from './components/show-echarts/chain-map/chain-map
 import { ChainCardComponent } from './components/show-echarts/chain-card/chain-card.component';
 import { ChainBarComponent } from './components/show-echarts/chain-bar/chain-bar.component';
 import {LocalStorage} from './utils/local-storage';
+import {SendDataService} from './services/send-data.service';
+import {SendDataImplService} from './services/send-data-impl.service';
 
 registerLocaleData(zh);
 @NgModule({
@@ -92,7 +94,8 @@ registerLocaleData(zh);
     { provide: NZ_I18N, useValue: zh_CN },
     { provide: DataService, useClass: DataImplServiceService},
     { provide: EcharMapService, useClass: EcharMapImplService},
-    { provide: InfoService, useClass: InfoImplService}
+    { provide: InfoService, useClass: InfoImplService},
+    {provide: SendDataService, useClass: SendDataImplService}
     ],
   bootstrap: [AppComponent]
 })

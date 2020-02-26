@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
@@ -9,6 +9,8 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 export class FourComponent implements OnInit {
 
   validateFormFour: FormGroup
+  // tslint:disable-next-line:no-output-rename
+  @Output('getInfo') info = new EventEmitter<any>();
 
   constructor(private fb: FormBuilder) { }
 
@@ -55,6 +57,10 @@ export class FourComponent implements OnInit {
       timeThree: new Date(result)
         .setFullYear((result).getFullYear() + 2)
     });
+  }
+
+  getInfo() {
+    this.info.emit(this.validateFormFour.value);
   }
 
 }

@@ -5,7 +5,7 @@ import {HttpClient, HttpParams} from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class InfoImplService extends InfoService{
+export class InfoImplService extends InfoService {
 
   dataUrl = 'http://localhost:8080/data';
   constructor(private http: HttpClient) {

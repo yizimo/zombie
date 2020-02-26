@@ -7,20 +7,20 @@
 </nz-steps>
 
 <div class="steps-content">
-  <app-one *ngIf="index === 0" #one></app-one>
-  <app-two *ngIf="index === 1"></app-two>
-  <app-three *ngIf="index === 2"></app-three>
-  <app-four *ngIf="index === 3"></app-four>
+  <app-one *ngIf="index === 0" (getInfo)="getChildInfo($event)" #one></app-one>
+  <app-two *ngIf="index === 1" (getInfo)="getChildInfo($event)" #two></app-two>
+  <app-three *ngIf="index === 2" (getInfo)="getChildInfo($event)" #three></app-three>
+  <app-four *ngIf="index === 3" (getInfo)="getChildInfo($event)" #four></app-four>
   <app-five *ngIf="index === 4"></app-five>
 </div>
 <div class="steps-action">
   <button nz-button nzType="default" (click)="pre()" *ngIf="current > 0">
     <span>Previous</span>
   </button>
-  <button nz-button nzType="default" (click)="next()" *ngIf="current < 4">
+  <button nz-button nzType="default" (click)="next()" *ngIf="current < 3">
     <span>Next</span>
   </button>
-  <button nz-button nzType="primary" (click)="done()" *ngIf="current === 4">
+  <button nz-button nzType="primary" (click)="done()" *ngIf="current === 3">
     <span>Done</span>
   </button>
 </div>

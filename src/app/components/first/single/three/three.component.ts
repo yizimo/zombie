@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {ValidateFormThree} from '../../../../kind/validate-form-three';
 
@@ -10,6 +10,8 @@ import {ValidateFormThree} from '../../../../kind/validate-form-three';
 export class ThreeComponent implements OnInit {
 
   validateFormThree: FormGroup;
+  // tslint:disable-next-line:no-output-rename
+  @Output('getInfo') info = new EventEmitter<any>();
 
   constructor(private fb: FormBuilder) { }
 
@@ -52,6 +54,9 @@ export class ThreeComponent implements OnInit {
       timeThree: new Date(result)
         .setFullYear((result).getFullYear() + 2)
     });
+  }
+  getInfo() {
+    this.info.emit(this.validateFormThree.value);
   }
 
 }

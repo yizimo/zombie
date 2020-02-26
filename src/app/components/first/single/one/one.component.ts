@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
@@ -8,7 +8,8 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 export class OneComponent implements OnInit {
   validateForm: FormGroup;
-
+  // tslint:disable-next-line:no-output-rename
+  @Output('getInfo') info = new EventEmitter<any>();
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
@@ -22,6 +23,10 @@ export class OneComponent implements OnInit {
       controllingType: [null, [Validators.required]],
       controllingShareHold: [null, [Validators.required]]
     });
+  }
+
+  getInfo() {
+    this.info.emit(this.validateForm.value);
   }
 
 }
