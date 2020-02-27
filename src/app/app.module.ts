@@ -46,6 +46,8 @@ import { ChainBarComponent } from './components/show-echarts/chain-bar/chain-bar
 import {LocalStorage} from './utils/local-storage';
 import {SendDataService} from './services/send-data.service';
 import {SendDataImplService} from './services/send-data-impl.service';
+import {GetSendDataService} from './services/get-send-data.service';
+import {GetSendDataImplService} from './services/get-send-data-impl.service';
 
 registerLocaleData(zh);
 @NgModule({
@@ -95,7 +97,8 @@ registerLocaleData(zh);
     { provide: DataService, useClass: DataImplServiceService},
     { provide: EcharMapService, useClass: EcharMapImplService},
     { provide: InfoService, useClass: InfoImplService},
-    {provide: SendDataService, useClass: SendDataImplService}
+    {provide: SendDataService, useClass: SendDataImplService},
+    {provide: GetSendDataService, useClass: GetSendDataImplService}
     ],
   bootstrap: [AppComponent]
 })
