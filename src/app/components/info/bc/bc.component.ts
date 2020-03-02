@@ -25,8 +25,10 @@ export class BCComponent implements OnInit {
         formatter(param) {
           if (param.data.value) {
             return param.data.name + ':' + param.data.value;
+          } else if (param.data.value === 0) {
+            return param.data.name + ':' + 0;
           } else {
-            return param.data.name ;
+            return param.data.name;
           }
         }
       },
@@ -67,6 +69,7 @@ export class BCComponent implements OnInit {
     this.listDataEdge = parse.business_state.zombieMap;
     this.localStorage.remove('la');
     this.getData();
+    console.log(this.bcOption);
     this.resizeChart();
   }
 
@@ -83,6 +86,9 @@ export class BCComponent implements OnInit {
         formatter(param) {
           if (param.data.value) {
             return param.data.name + ':' + param.data.value;
+          } else if (param.data.value === 0) {
+            console.log('111111');
+            return param.data.name + ':' + 0;
           } else {
             return param.data.name ;
           }

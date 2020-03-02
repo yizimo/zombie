@@ -9,13 +9,13 @@ import {Zombie} from '../../../kind/zombie';
 })
 export class BIComponent implements OnInit {
 
-  zombie: Zombie;
+  zombie: any;
   constructor(private localStorage: LocalStorage) { }
 
   ngOnInit() {
     const parse = this.localStorage.getObject('la');
     this.zombie = parse.page_head;
-    console.log(this.zombie.id);
+    console.log(this.zombie);
     this.localStorage.remove('la');
   }
 

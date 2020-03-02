@@ -8,7 +8,6 @@
     </ng-template>
   </div>
   <div nz-col class="gutter-row" nzSpan="3" nzOffset="15">
-    <button class="button" nz-button >导出</button>
   </div>
   <div nz-col nzSpan="22" [nzPush]=1>
     <nz-table #filterTable [nzData]="listOfData">
@@ -22,8 +21,8 @@
       </thead>
       <tbody>
       <tr *ngFor="let data of filterTable.data">
-        <td>{{ data.componyId }}</td>
-        <td>{{ data.flag == true ? '是' : '否' }}</td>
+        <td>{{ data.companyId }}</td>
+        <td>{{ data.flag == 1 ? '是' : '否' }}</td>
         <td>{{ data.warningLevel }}</td>
         <td>{{ data.advice }}</td>
       </tr>

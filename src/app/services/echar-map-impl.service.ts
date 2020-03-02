@@ -7,7 +7,7 @@ import {EcharMapService} from './echar-map.service';
 })
 export class EcharMapImplService extends EcharMapService {
 
-  dataUrl = 'http://localhost:8080/data';
+  dataUrl = 'http://47.98.46.41:800/data';
 
   constructor(private http: HttpClient) {
     super();

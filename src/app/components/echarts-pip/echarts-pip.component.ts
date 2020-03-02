@@ -76,8 +76,8 @@ export class EchartsPipComponent implements OnInit {
   getPipData() {
     this.echarMapService.getEcharByPie().subscribe(data =>  {
       this.getData(data);
+      this.resizeChart();
     });
-    this.resizeChart();
   }
 
   onChartInit(event) {

@@ -30,7 +30,9 @@ export class DataComponent implements OnInit {
   getResultBySearchName(): void {
     console.log(this.searchValue);
     this.dataService.getResultBySearchName(this.searchValue).subscribe(data => {
-      this.listOfData = data;
+      console.log(data);
+      this.listOfData = [];
+      this.listOfData[0] = data.data;
     });
   }
 }

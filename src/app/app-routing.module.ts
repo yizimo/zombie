@@ -25,7 +25,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'result', component: ResultComponent,
+    path: 'result/:id', component: ResultComponent,
     children: [
       { path: 'tabl', component: TablComponent}
     ]

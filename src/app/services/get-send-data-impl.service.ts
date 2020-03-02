@@ -5,9 +5,9 @@ import {HttpClient} from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class GetSendDataImplService extends GetSendDataService{
+export class GetSendDataImplService extends GetSendDataService {
 
-  dataUrl = 'http://localhost:8080/data';
+  dataUrl = 'http://47.98.46.41:800/data';
 
   constructor(private http: HttpClient) {
     super();

@@ -58,7 +58,6 @@ export class EchartsLineComponent implements OnInit {
   getPlotData() {
     this.echarMapService.getEcharByPlot().subscribe(data => {
       this.listPlot = data.data.trade_plot_chart;
-      console.log(data);
       // tslint:disable-next-line:forin only-arrow-functions
       this.listPlot.map( function(obj, index) {
         obj.type = 'line';
@@ -66,20 +65,28 @@ export class EchartsLineComponent implements OnInit {
         return obj;
       });
       this.lineOption.series = this.listPlot;
+      console.log(this.lineOption);
+      this.resizeChart();
     });
-    this.resizeChart();
   }
 
   onChartInit(event) {
+    console.log(event);
     this.plotChart = event;
   }
 
   resizeChart() {
-      this.plotChart.setOption(this.lineOption, true);
+    console.log(this.plotChart);
+    this.plotChart.setOption(this.lineOption, true);
   }
 
   getDemo(event) {
     console.log(event);
     this.lineAndPipService.lineToPip(event.name);
+  }
+
+  // tslint:disable-next-line:use-lifecycle-interface
+  ngOnChanges() {
+    console.log('11111');
   }
 }

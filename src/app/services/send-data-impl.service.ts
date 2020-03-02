@@ -7,10 +7,10 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 })
 export class SendDataImplService extends SendDataService {
 
-  dataUrl = 'http://localhost:8080/data';
+  dataUrl = 'http://47.98.46.41:800/data';
   httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type':  'application/json; charset=UTF-8'
+      'Content-Type':  'application/x-www-form-urlencoded'
     })
   };
 
@@ -18,6 +18,6 @@ export class SendDataImplService extends SendDataService {
     super();
   }
   getInfo(data: any) {
-   return this.http.post(this.dataUrl + '/send_data', data, this.httpOptions);
+   return this.http.post(this.dataUrl + '/send_data/', { ' zimo' : data}, this.httpOptions);
   }
 }

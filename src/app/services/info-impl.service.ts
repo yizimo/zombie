@@ -7,7 +7,7 @@ import {HttpClient, HttpParams} from '@angular/common/http';
 })
 export class InfoImplService extends InfoService {
 
-  dataUrl = 'http://localhost:8080/data';
+  dataUrl = 'http://47.98.46.41:800/data';
   constructor(private http: HttpClient) {
     super();
   }

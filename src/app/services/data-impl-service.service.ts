@@ -8,7 +8,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class DataImplServiceService extends DataService {
 
-   dataUrl = 'http://localhost:8080/data';
+   dataUrl = 'http://47.98.46.41:8080/data';
 
   constructor(private http: HttpClient) {
     super();
@@ -18,7 +18,7 @@ export class DataImplServiceService extends DataService {
     return  this.http.get(this.dataUrl + '/center');
   }
   getResultBySearchName(searchName: number) {
-    return this.http.post(this.dataUrl + '/search', searchName);
+    return this.http.get(this.dataUrl + '/search?id=' + searchName);
   }
 
 }

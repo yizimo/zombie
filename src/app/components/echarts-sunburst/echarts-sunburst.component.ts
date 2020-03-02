@@ -25,7 +25,7 @@ export class EchartsSunburstComponent implements OnInit {
     visualMap: {
       type: 'continuous',
       min: 0,
-      max: 500,
+      max: 2000,
       inRange: {
         color: ['#2D5F73', '#538EA6', '#F2D1B3', '#F2B8A2', '#F28C8C']
       }
@@ -65,8 +65,8 @@ export class EchartsSunburstComponent implements OnInit {
       this.listSunData = data.data.trade_sun_chart;
       console.log(this.listSunData);
       this.sunburstOption.series.data = this.listSunData;
+      this.resizeChart();
     });
-    this.resizeChart()
   }
 
   onChartInit(event) {
@@ -74,9 +74,8 @@ export class EchartsSunburstComponent implements OnInit {
   }
 
   resizeChart() {
-    if (this.sunChart) {
+    console.log(this.listSunData);
       this.sunChart.setOption(this.sunburstOption, true);
-    }
   }
 
 

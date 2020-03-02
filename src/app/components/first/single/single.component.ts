@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {SendDataService} from '../../../services/send-data.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-single',
@@ -28,7 +29,7 @@ export class SingleComponent implements OnInit {
   fourComponent: any;
   @ViewChild('five', {static: false})
   fiveComponent: any;
-  constructor(private sendDataService: SendDataService) { }
+  constructor(private sendDataService: SendDataService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -132,6 +133,7 @@ export class SingleComponent implements OnInit {
         console.log(this.info);
         this.sendDataService.getInfo(this.info).subscribe(data => {
           console.log(data);
+          this.router.navigate(['result', data.data.companyId]);
         });
         break;
       }

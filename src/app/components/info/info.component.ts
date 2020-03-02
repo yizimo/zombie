@@ -32,6 +32,7 @@ export class InfoComponent implements OnInit {
 
   getInfo(id: any) {
     this.infoService.getInfo(id).subscribe(data => {
+      console.log(data);
       this.data = data.data;
       this.getIn();
     });
