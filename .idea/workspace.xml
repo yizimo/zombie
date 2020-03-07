@@ -3,17 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="d95235a5-d759-4bf5-8601-88c6e2983c24" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/data/data.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/data/data.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/data/data.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/data/data.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/data/data.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/data/data.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/echarts-line/echarts-line.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/echarts-line/echarts-line.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/echarts-pip/echarts-pip.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/echarts-pip/echarts-pip.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/echarts-sunburst/echarts-sunburst.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/echarts-sunburst/echarts-sunburst.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/first/single/single.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/first/single/single.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/info/bc/bc.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/info/bc/bc.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/info/bi/bi.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/info/bi/bi.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/info/info.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/info/info.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/result/result.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/result/result.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/echartts/echartts.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/echartts/echartts.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/show-echarts/chain-card/chain-card.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/show-echarts/chain-card/chain-card.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/show-echarts/chain-card/chain-card.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/show-echarts/chain-card/chain-card.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/show-echarts/chain-table/chain-table.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/show-echarts/chain-table/chain-table.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/show-echarts/chain-table/chain-table.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/show-echarts/chain-table/chain-table.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/show-echarts/show-echarts.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/show-echarts/show-echarts.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/services/data-impl-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/data-impl-service.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/services/echar-map-impl.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/echar-map-impl.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/services/get-send-data-impl.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/get-send-data-impl.service.ts" afterDir="false" />
@@ -124,7 +122,9 @@
       <workItem from="1582697783950" duration="10667000" />
       <workItem from="1582885432575" duration="645000" />
       <workItem from="1582977274998" duration="473000" />
-      <workItem from="1583042438911" duration="8626000" />
+      <workItem from="1583042438911" duration="9166000" />
+      <workItem from="1583564950761" duration="2099000" />
+      <workItem from="1583581631857" duration="4265000" />
     </task>
     <task id="LOCAL-00001" summary="前端">
       <created>1581252588259</created>
@@ -266,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582814578634</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="画像">
+      <created>1583159064237</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1583159064238</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,10 +310,10 @@
       <screen x="0" y="23" width="1440" height="816" />
     </state>
     <state x="458" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.816@0.23.1440.816" timestamp="1581835514100" />
-    <state x="313" y="38" key="CommitChangelistDialog2" timestamp="1582814576516">
-      <screen x="0" y="23" width="1440" height="822" />
+    <state x="313" y="38" key="CommitChangelistDialog2" timestamp="1583159062154">
+      <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state x="313" y="38" key="CommitChangelistDialog2/0.23.1440.821@0.23.1440.821" timestamp="1582201677894" />
+    <state x="313" y="38" key="CommitChangelistDialog2/0.23.1440.821@0.23.1440.821" timestamp="1583159062154" />
     <state x="313" y="38" key="CommitChangelistDialog2/0.23.1440.822@0.23.1440.822" timestamp="1582814576516" />
     <state x="313" y="38" key="CommitChangelistDialog2/0.23.1440.823@0.23.1440.823" timestamp="1582725480606" />
     <state x="101" y="123" width="1240" height="616" key="DiffContextDialog" timestamp="1581922527684">
@@ -348,10 +355,10 @@
     </state>
     <state x="230" y="72" key="SettingsEditor/0.23.1440.821@0.23.1440.821" timestamp="1581930666927" />
     <state x="230" y="72" key="SettingsEditor/0.23.1440.823@0.23.1440.823" timestamp="1581253374467" />
-    <state x="321" y="175" key="Vcs.Push.Dialog.v2" timestamp="1582814582960">
-      <screen x="0" y="23" width="1440" height="822" />
+    <state x="321" y="175" key="Vcs.Push.Dialog.v2" timestamp="1583159069109">
+      <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state x="321" y="175" key="Vcs.Push.Dialog.v2/0.23.1440.821@0.23.1440.821" timestamp="1582201682741" />
+    <state x="321" y="175" key="Vcs.Push.Dialog.v2/0.23.1440.821@0.23.1440.821" timestamp="1583159069109" />
     <state x="321" y="175" key="Vcs.Push.Dialog.v2/0.23.1440.822@0.23.1440.822" timestamp="1582814582960" />
     <state x="321" y="175" key="Vcs.Push.Dialog.v2/0.23.1440.823@0.23.1440.823" timestamp="1582725497258" />
     <state x="101" y="123" width="1240" height="616" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1581914983286">

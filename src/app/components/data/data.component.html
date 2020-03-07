@@ -9,7 +9,7 @@
   </div>
   <div nz-col class="gutter-row" nzSpan="3" nzOffset="15">
   </div>
-  <div nz-col nzSpan="22" [nzPush]=1>
+  <div nz-col nzSpan="22" [nzPush]=1 style="min-height: 750px">
     <nz-table #filterTable [nzData]="listOfData">
       <thead>
       <tr>
@@ -23,7 +23,12 @@
       <tr *ngFor="let data of filterTable.data">
         <td>{{ data.companyId }}</td>
         <td>{{ data.flag == 1 ? '是' : '否' }}</td>
-        <td>{{ data.warningLevel }}</td>
+        <td>
+          <nz-tag [nzColor]="'#f50'" *ngIf="data.warningLevel >= 0.8">{{ data.warningLevel }}</nz-tag>
+          <nz-tag [nzColor]="'volcano'" *ngIf="data.warningLevel >= 0.6 && data.warningLevel < 0.8">{{ data.warningLevel }}</nz-tag>
+          <nz-tag [nzColor]="'orange'" *ngIf="data.warningLevel >= 0.5 && data.warningLevel < 0.6">{{ data.warningLevel }}</nz-tag>
+          <nz-tag [nzColor]="'green'" *ngIf="data.warningLevel < 0.5">{{ data.warningLevel }}</nz-tag>
+        </td>
         <td>{{ data.advice }}</td>
       </tr>
       </tbody>

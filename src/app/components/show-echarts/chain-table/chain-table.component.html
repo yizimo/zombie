@@ -2,11 +2,10 @@
   <thead>
   <tr>
     <th >地区</th>
-    <th >现存僵尸企业</th>
-    <th >累计僵尸企业</th>
-    <th >已兼并重组</th>
-    <th >已破产</th>
-    <th >新生企业</th>
+    <th >僵尸企业</th>
+    <th >建议破产</th>
+    <th >建议兼并重组</th>
+    <th >建议注销成立</th>
   </tr>
   </thead>
   <tbody>
@@ -22,7 +21,6 @@
           {{ item.name }}
         </td>
         <td>{{ item.isZombie }}</td>
-        <td>{{ item.notIsZombie }}</td>
         <td>{{ item.isRestruct }}</td>
         <td>{{ item.isBrankruptcy }}</td>
         <td>{{ item.isNew }}</td>
