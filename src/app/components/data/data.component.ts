@@ -49,29 +49,49 @@ export class DataComponent implements OnInit {
     });
   }
 
-  filter(listOfSearchName: number[]): void {
+  filter(listOfSwrnName: number[], listOfSearchName: number[]): void {
     console.log(listOfSearchName);
+    console.log(listOfSwrnName)
     this.listOfIsName = listOfSearchName;
+    this.listOfWarnName = listOfSwrnName;
     this.search();
   }
 
   search() {
     this.listOfData = this.copyListOfData;
     console.log(this.listOfIsName)
-    this.listOfData = this.listOfData.filter(item => this.listOfIsName.indexOf(item.flag) !== -1);
+    this.listOfData = this.listOfData.filter(item => {
+      return (this.listOfIsName.length === 0 ? true : this.listOfIsName.indexOf(item.flag) !== -1 ) && this.xuanze(item.warningLevel);
+    });
   }
 
-  xuanze(num: number): boolean {
-    return this.listOfWarnName.forEach(vv => {
+  xuanze(num: number) {
+    if (this.listOfWarnName.length === 0) {
+      return true;
+    }
+    let flag1 = false;
+    this.listOfWarnName.forEach(vv => {
       if (vv === 0.5) {
-        return num < 0.5;
-      } else if (vv === 0.6) {
-        return num >= 0.5 && num < 0.6;
-      } else if (vv === 0.8) {
-        return num >= 0.6 && num < 0.8;
-      } else if (vv === 1) {
-        return num >= 0.8 && num <= 1;
+         if (num < 0.5) {
+           flag1 = true;
+         }
+      }
+      if (vv === 0.6) {
+        if (num >= 0.5 && num < 0.6) {
+          flag1 = true;
+        }
+      }
+      if (vv === 0.8) {
+        if (num >= 0.6 && num < 0.8) {
+          flag1 = true;
+        }
+      }
+      if (vv === 1) {
+        if (num >= 0.8 && num <= 1) {
+          flag1 = true;
+        }
       }
     });
+    return flag1;
   }
 }

@@ -16,8 +16,10 @@
         <th>企业ID</th>
         <th  nzShowFilter
              [nzFilters]="listOfIs"
-             (nzFilterChange)="filter( $event)">是否为僵尸企业</th>
-        <th>预警级别</th>
+             (nzFilterChange)="filter(listOfWarnName, $event)">是否为僵尸企业</th>
+        <th nzShowFilter
+            [nzFilters]="listOfWarn"
+            (nzFilterChange)="filter( $event,listOfIsName)">预警级别</th>
         <th>整改意见</th>
       </tr>
       </thead>
