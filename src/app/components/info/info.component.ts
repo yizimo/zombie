@@ -15,7 +15,7 @@ export class InfoComponent implements OnInit {
   info: any;
   id: any;
   data: any;
-
+  zombie: any;
   constructor(private activatedRoute: ActivatedRoute,
               private infoService: InfoService, private location: Location, private localStorage: LocalStorage) { }
 
@@ -34,6 +34,7 @@ export class InfoComponent implements OnInit {
     this.infoService.getInfo(id).subscribe(data => {
       console.log(data);
       this.data = data.data;
+      this.zombie = this.data.page_head;
       this.getIn();
     });
   }

@@ -45,14 +45,14 @@ export class ChainMapComponent implements OnInit {
             '593.479,423.062,591.891,421.146,591.891L421.146,591.891zM421.146,591.891',
           // tslint:disable-next-line:only-arrow-functions
           onclick: () => {
-            this.getFlag(1);
+            this.getFlag();
           }
         }
       }
     },
     visualMap: {
-      min: 0,
-      max: 10000,
+      min: 300,
+      max: 500,
       text: ['High', 'Low'],
       realtime: false,
       calculable: true,
@@ -97,7 +97,7 @@ export class ChainMapComponent implements OnInit {
           '593.479,423.062,591.891,421.146,591.891L421.146,591.891zM421.146,591.891',
           // tslint:disable-next-line:only-arrow-functions
           onclick: () => {
-            this.getFlag(0);
+            this.getFlag();
           }
         }
       }
@@ -205,7 +205,7 @@ export class ChainMapComponent implements OnInit {
     }
   }
 
-  getFlag(flag) {
+  getFlag() {
     this.flag++;
     this.resizeByChainOrBar(this.flag);
   }
