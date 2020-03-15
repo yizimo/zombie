@@ -10,7 +10,6 @@ import {ShowEchartsComponent} from './components/show-echarts/show-echarts.compo
 import {EcharttsComponent} from './components/echartts/echartts.component';
 import {InfoComponent} from './components/info/info.component';
 import {IAComponent} from './components/info/ia/ia.component';
-import {BIComponent} from './components/info/bi/bi.component';
 import {FCComponent} from './components/info/fc/fc.component';
 import {BSComponent} from './components/info/bs/bs.component';
 import {BCComponent} from './components/info/bc/bc.component';
@@ -31,7 +30,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'data', component: DataComponent
+    path: 'data/:id', component: DataComponent
   },
   {
     path: 'relation', component: EchartRelationComponent

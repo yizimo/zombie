@@ -9,44 +9,44 @@ import {LocalStorage} from '../../../utils/local-storage';
 export class BSComponent implements OnInit {
 
   listData: any = [];
-  listDataEdge: any = [];
   ecahrtBS: any;
-  bsOption = {
-    backgroundColor: '#FFFFFF',
-    series: [{
-      type: 'graph',
-      layout: 'force',
-      roam: true,
-      draggable: true,
-      label: {
-        show: true,
-        position: 'right',
-        // tslint:disable-next-line:only-arrow-functions
-        formatter(param) {
-          if (param.data.value) {
-            return param.data.name + ':' + param.data.value;
-          } else {
-            return param.data.name ;
-          }
-        }
-      },
-      data: this.listData,
-      categories: [{name: '资产总额'},
-        {name: '负债总额'}],
-      force: {
-        repulsion: 1000,
-        gravity: 0.2
-      },
-      edges: this.listDataEdge
-    }],
+  bsOption =  {
+    color: ['#006699', '#4cabce'],
+    tooltip: {
+      trigger: 'axis',
+      axisPointer: {
+        type: 'shadow'
+      }
+    },
+    grid: {
+      left: '10%',
+      right: '10%',
+      bottom: '3%',
+      containLabel: true
+    },
+    legend: {
+      data: ['资产总额', '负债总额']
+    },
+    xAxis: [
+      {
+        type: 'category',
+        axisTick: {show: false},
+        data: [ '2015', '2016', '2017']
+      }
+    ],
+    yAxis: [
+      {
+        type: 'value'
+      }
+    ],
+    series: this.listData
   };
 
   constructor(private localStorage: LocalStorage) { }
 
   ngOnInit() {
     const parse = this.localStorage.getObject('la');
-    this.listDataEdge = parse.asset_liabilities.zombieMap;
-    this.listData = parse.asset_liabilities.relationMaps;
+    this.listData = parse.asset_liabilities;
     console.log(parse);
     this.localStorage.remove('la');
     this.getData();
@@ -54,32 +54,7 @@ export class BSComponent implements OnInit {
   }
 
   getData() {
-    this.bsOption.series.push({
-      type: 'graph',
-      layout: 'force',
-      roam: true,
-      draggable: true,
-      label: {
-        show: true,
-        position: 'right',
-        // tslint:disable-next-line:only-arrow-functions
-        formatter(param) {
-          if (param.data.value) {
-            return param.data.name + ':' + param.data.value;
-          } else {
-            return param.data.name ;
-          }
-        }
-      },
-      data: this.listData,
-      categories: [{name: '资产总额'},
-        {name: '负债总额'}],
-      force: {
-        repulsion: 1000,
-        gravity: 0.2
-      },
-      edges: this.listDataEdge
-    });
+    this.bsOption.series = this.listData;
   }
 
   onEchartInit(event) {

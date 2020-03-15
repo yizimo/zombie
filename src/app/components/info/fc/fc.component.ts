@@ -15,55 +15,32 @@ export class FCComponent implements OnInit {
   ecahrtFC: any;
   fcOption = {
     backgroundColor: '#FFFFFF',
-    series: [{
-      type: 'graph',
-      layout: 'force',
-      roam: true,
-      draggable: true,
-      label: {
-        show: true,
-        position: 'right',
-        // tslint:disable-next-line:only-arrow-functions
-        formatter(param) {
-          if (param.data.value) {
-            return param.data.name + ':' + param.data.value;
-          } else {
-            return param.data.name ;
-          }
+    tooltip: {
+      trigger: 'item'
+    },
+    series: [
+      {
+        type: 'sankey',
+        left: 50.0,
+        top: 20.0,
+        right: 150.0,
+        bottom: 25.0,
+        data: this.listData,
+        links: this.listDataEdge,
+        lineStyle: {
+          color: 'source',
+          curveness: 0.5
+        },
+        itemStyle: {
+          color: '#1f77b4',
+          borderColor: '#1f77b4'
+        },
+        label: {
+          color: 'rgba(0,0,0,0.7)',
+          fontFamily: 'Arial',
+          fontSize: 10
         }
-      },
-      data: this.listData,
-      categories: [
-        {
-          name: '债卷融资额度',
-        },
-        {
-          name: '债卷融资成本',
-        },
-        {
-          name: '股权融资额度',
-        },
-        {
-          name: '股权融资成本',
-        },
-        {
-          name: '内部融资和贸易融资额度',
-        },
-        {
-          name: '内部融资和贸易融资成本',
-        },
-        {
-          name: '项目融资和政策融资额度',
-        },
-        {
-          name: '项目融资和政策融资成本',
-        }],
-      force: {
-        repulsion: 1000,
-        gravity: 0.2
-      },
-      links: this.listDataEdge
-    }],
+      }]
   };
   constructor(private localStorage: LocalStorage) {
 
@@ -71,63 +48,39 @@ export class FCComponent implements OnInit {
 
   ngOnInit() {
     const parse = this.localStorage.getObject('la');
-    console.log(parse);
-    this.listDataEdge = parse.financing_channels.zombieMap;
-    this.listData = parse.financing_channels.relationMaps;
+    this.listDataEdge = parse.financing_channels.relationMaps;
+    this.listData = parse.financing_channels.zombieMap;
     this.localStorage.remove('la');
     this.changeEchar();
+    // // @ts-ignore
+    // let la =  echarts.init(document.getElementById('echarts'));
+    // // @ts-ignore
+    // la.setOption(this.fcOption);
     this.resizeChart();
   }
 
   changeEchar() {
     this.fcOption.series.push({
-      type: 'graph',
-      layout: 'force',
-      roam: true,
-      draggable: true,
-      label: {
-        show: true,
-        position: 'right',
-        // tslint:disable-next-line:only-arrow-functions
-        formatter(param) {
-          if (param.data.value) {
-            return param.data.name + ':' + param.data.value;
-          } else {
-            return param.data.name ;
-          }
-        }
-      },
+      type: 'sankey',
+      left: 50.0,
+      top: 20.0,
+      right: 150.0,
+      bottom: 25.0,
       data: this.listData,
-      categories: [
-        {
-          name: '债卷融资额度',
-        },
-        {
-          name: '债卷融资成本',
-        },
-        {
-          name: '股权融资额度',
-        },
-        {
-          name: '股权融资成本',
-        },
-        {
-          name: '内部融资和贸易融资额度',
-        },
-        {
-          name: '内部融资和贸易融资成本',
-        },
-        {
-          name: '项目融资和政策融资额度',
-        },
-        {
-          name: '项目融资和政策融资成本',
-        }],
-      force: {
-        repulsion: 1000,
-        gravity: 0.2
+      links: this.listDataEdge,
+      lineStyle: {
+        color: 'source',
+        curveness: 0.5
       },
-      links: this.listDataEdge
+      itemStyle: {
+        color: '#1f77b4',
+        borderColor: '#1f77b4'
+      },
+      label: {
+        color: 'rgba(0,0,0,0.7)',
+        fontFamily: 'Arial',
+        fontSize: 10
+      }
     });
   }
 
@@ -137,6 +90,7 @@ export class FCComponent implements OnInit {
 
   resizeChart() {
     if (this.ecahrtFC) {
+      console.log(this.fcOption);
       this.ecahrtFC.setOption(this.fcOption, true);
     }
   }

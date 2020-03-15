@@ -1,0 +1,9 @@
+{
+  "/api": {
+    "target": "http://47.98.46.41:800",
+    "secure": false,
+    "pathRewrite": {"^/api" : "http://47.98.46.41:800/data"},
+    "changeOrigin": "true",
+    "logLevel": "info"
+  }
+}

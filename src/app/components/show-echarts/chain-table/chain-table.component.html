@@ -13,7 +13,7 @@
     <ng-container *ngFor="let item of mapOfExpandedData[data.id]">
       <tr *ngIf="(item.parent && item.parent.expand) || !item.parent">
         <td
-          [nzIndentSize]="item.level * 20"
+          [nzIndentSize]="item.level * 100"
           [nzShowExpand]="!!item.listVin"
           [(nzExpand)]="item.expand"
           (nzExpandChange)="collapse(mapOfExpandedData[data.id], item, $event)"

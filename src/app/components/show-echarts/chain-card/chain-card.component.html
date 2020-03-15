@@ -1,9 +1,10 @@
 <nz-col [nzSpan]="12" class="left">
   <nz-card>
     <nz-statistic
-      [nzValue]="11 "
+      [nzValue]="data.obj1.value"
       [nzTitle]="'僵尸企业'"
       [nzValueStyle]="{ color: 'blue' }"
+      (click)="goto(1)"
     >
     </nz-statistic>
   </nz-card>
@@ -11,30 +12,34 @@
 <nz-col [nzSpan]="12" class="right">
   <nz-card>
     <nz-statistic
-      [nzValue]="11 "
+      [nzValue]="data.obj2.value"
       [nzTitle]="'疑似僵尸企业'"
       [nzValueStyle]="{ color: 'blue' }"
+      (click)="goto(2)"
     >
     </nz-statistic>
   </nz-card>
 </nz-col>
 
 <nz-col [nzSpan]="8" class="left">
-  <nz-card>
+  <nz-card >
     <nz-statistic
-      [nzValue]="11 "
+      [nzValue]="data.obj3.value"
       [nzTitle]="'建议破产清退'"
       [nzValueStyle]="{ color: 'blue' }"
+      (click)="goto(3)"
     >
     </nz-statistic>
   </nz-card>
+
 </nz-col>
 <nz-col [nzSpan]="8">
   <nz-card>
     <nz-statistic
-      [nzValue]="11 "
+      [nzValue]="data.obj4.value"
       [nzTitle]="'建议兼并重组'"
       [nzValueStyle]="{ color: 'blue' }"
+      (click)="goto(4)"
     >
     </nz-statistic>
   </nz-card>
@@ -42,9 +47,10 @@
 <nz-col [nzSpan]="8" class="right">
   <nz-card>
     <nz-statistic
-      [nzValue]="11 "
+      [nzValue]="data.obj5.value"
       [nzTitle]="'建议扶持发展'"
       [nzValueStyle]="{ color: 'blue' }"
+      (click)="goto(5)"
     >
     </nz-statistic>
   </nz-card>

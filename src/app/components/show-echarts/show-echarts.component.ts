@@ -13,16 +13,23 @@ import {EcharMapService} from '../../services/echar-map.service';
 export class ShowEchartsComponent implements OnInit {
 
   flag = 0;
+  advice: any;
 
-  constructor() {
+  constructor(private chainMapService: EcharMapService) {
   }
 
   ngOnInit() {
+    this.getAdvice();
   }
 
   getFalg() {
     this.flag++;
   }
-
+  getAdvice() {
+    this.chainMapService.getChainMapByAdvice().subscribe(data => {
+      console.log(data);
+      this.advice = data.data.advice.obj1;
+    });
+  }
 
 }

@@ -11,7 +11,7 @@ export abstract class DataService {
   /**
    * 获取全部数据
    */
-  abstract getResult();
+  abstract getResult(id: number);
   /**
    * 搜索
    */

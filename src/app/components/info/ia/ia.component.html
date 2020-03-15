@@ -1,1 +1,5 @@
-<div echarts [options]="iaOption" (chartInit)="onEchartInit($event)"  style="min-height: 400px"   > </div>
+<nz-descriptions  nzBordered nzLayout="vertical">
+  <nz-descriptions-item nzTitle="{{data.obj1.name}}">{{data.obj1.value}}</nz-descriptions-item>
+  <nz-descriptions-item nzTitle="{{data.obj2.name}}">{{data.obj2.value}}</nz-descriptions-item>
+  <nz-descriptions-item nzTitle="{{data.obj3.name}}">{{data.obj3.value}}</nz-descriptions-item>
+</nz-descriptions>

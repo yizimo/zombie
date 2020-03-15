@@ -23,7 +23,7 @@ class Vince {
 export class ChainTableComponent implements OnInit {
 
   listVince: Vince[] = [];
-  mapOfExpandedData: { [key: string]: Vince[] } = {};
+  mapOfExpandedData: { [key: number]: Vince[] } = {};
   constructor(private echarMapService: EcharMapService) { }
 
   ngOnInit() {
@@ -73,11 +73,10 @@ export class ChainTableComponent implements OnInit {
         }
       }
     }
-
     return array;
   }
 
-  visitNode(node: Vince, hashMap: { [key: string]: boolean }, array: Vince[]): void {
+  visitNode(node: Vince, hashMap: { [key: number]: boolean }, array: Vince[]): void {
     if (!hashMap[node.id]) {
       hashMap[node.id] = true;
       array.push(node);

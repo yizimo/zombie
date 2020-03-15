@@ -24,14 +24,12 @@
             </nz-descriptions>
           </div>
         </div>
-
-
       </nz-page-header-content>
 
   </nz-page-header>
   <nz-layout class="inner-content" style="background: #fff; margin-top: 16px;" nz-col class="gutter-row" nzSpan="22" [nzPush]=1 >
     <nz-header style="background: #fff; text-align: center">
-        aaaaa
+      <h2>该僵尸企业可能性为<span [ngStyle]="{'color': color}">{{advice.probability}}%</span> ,属于<span [ngStyle]="{'color': color}">{{advice.grade}}</span>企业</h2>
     </nz-header>
     <nz-content>
       <ul nz-menu nzMode="horizontal">

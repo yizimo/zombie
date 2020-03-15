@@ -7,7 +7,7 @@ import {EcharMapService} from './echar-map.service';
 })
 export class EcharMapImplService extends EcharMapService {
 
-  dataUrl = 'http://47.98.46.41:80/data';
+  dataUrl = 'http://47.98.46.41:800/data';
 
   constructor(private http: HttpClient) {
     super();
@@ -15,6 +15,12 @@ export class EcharMapImplService extends EcharMapService {
 
   getEcharByChinaMap() {
     return this.http.get(this.dataUrl + '/get_area_chart_data');
+  }
+  getChainMapByCard() {
+    return this.http.get(this.dataUrl + '/get_area_chart_cart');
+  }
+  getChainMapByAdvice() {
+    return this.http.get(this.dataUrl + '/get_area_chart_advice');
   }
   getEchartByChinaTable() {
     return this.http.get(this.dataUrl + '/get_chart_china_table');
@@ -32,6 +38,9 @@ export class EcharMapImplService extends EcharMapService {
     return this.http.get(this.dataUrl + '/getRelation');
   }
   getEchartByPipAndName(name: string) {
-    return this.http.get(this.dataUrl + '/get_echart_pip_name?name=' + name);
+    return this.http.get(this.dataUrl + '/get_echart_pip_name?year=' + name);
+  }
+  getEchartByPipByAdvice() {
+    return this.http.get(this.dataUrl + '/get_echart_pip_advice');
   }
 }

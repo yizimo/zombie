@@ -12,10 +12,12 @@ import {LocalStorage} from '../../utils/local-storage';
 })
 export class InfoComponent implements OnInit {
 
+  color = 'red';
   info: any;
   id: any;
   data: any;
   zombie: any;
+  advice: any;
   constructor(private activatedRoute: ActivatedRoute,
               private infoService: InfoService, private location: Location, private localStorage: LocalStorage) { }
 
@@ -35,6 +37,16 @@ export class InfoComponent implements OnInit {
       console.log(data);
       this.data = data.data;
       this.zombie = this.data.page_head;
+      this.advice = this.data.page_company_all;
+      if (this.advice.probability >= 80) {
+        this.color = 'red';
+      } else if (this.advice.probability >= 60) {
+        this.color = 'orange';
+      } else if (this.advice.probability >= 50) {
+        this.color = 'yellow';
+      } else {
+        this.color = 'green';
+      }
       this.getIn();
     });
   }
@@ -45,5 +57,6 @@ export class InfoComponent implements OnInit {
 
   getIn() {
     this.localStorage.setObject('la', this.data);
+    console.log(this.localStorage.getObject('la'));
   }
 }

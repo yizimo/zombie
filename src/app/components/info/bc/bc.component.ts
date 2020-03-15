@@ -9,55 +9,29 @@ import {LocalStorage} from '../../../utils/local-storage';
 export class BCComponent implements OnInit {
 
   listData: any = [];
-  listDataEdge: any = [];
   ecahrtBC: any;
   bcOption = {
-    backgroundColor: '#FFFFFF',
-    series: [{
-      type: 'graph',
-      layout: 'force',
-      roam: true,
-      draggable: true,
-      label: {
-        show: true,
-        position: 'right',
-        // tslint:disable-next-line:only-arrow-functions
-        formatter(param) {
-          if (param.data.value) {
-            return param.data.name + ':' + param.data.value;
-          } else if (param.data.value === 0) {
-            return param.data.name + ':' + 0;
-          } else {
-            return param.data.name;
-          }
-        }
-      },
-      data: this.listData,
-      categories: [
-        {
-          name: '营业总收入',
-        },
-        {
-          name: '主营业务收入',
-        },
-        {
-          name: '利润总额',
-        },
-        {
-          name: '净利润',
-        },
-        {
-          name: '纳税总额',
-        },
-        {
-          name: '所有者权益合计',
-        }],
-      force: {
-        repulsion: 1000,
-        gravity: 0.2
-      },
-      edges: this.listDataEdge
-    }],
+    tooltip: {
+      trigger: 'axis'
+    },
+    legend: {
+      data: ['营业总收入', '利润总额', '净利润', '纳税总额', '所有者权益']
+    },
+    grid: {
+      left: '10%',
+      right: '10%',
+      bottom: '3%',
+      containLabel: true
+    },
+    xAxis: {
+      type: 'category',
+      boundaryGap: false,
+      data: ['2015', '2016', '2017']
+    },
+    yAxis: {
+      type: 'value'
+    },
+    series: this.listData
   };
 
   constructor(private localStorage: LocalStorage) { }
@@ -65,69 +39,24 @@ export class BCComponent implements OnInit {
   ngOnInit() {
     const parse = this.localStorage.getObject('la');
     console.log(parse.business_state);
-    this.listData = parse.business_state.relationMaps;
-    this.listDataEdge = parse.business_state.zombieMap;
+    this.listData = parse.business_state;
     this.localStorage.remove('la');
     this.getData();
-    console.log(this.bcOption);
     this.resizeChart();
   }
 
   getData() {
-    this.bcOption.series.push({
-      type: 'graph',
-      layout: 'force',
-      roam: true,
-      draggable: true,
-      label: {
-        show: true,
-        position: 'right',
-        // tslint:disable-next-line:only-arrow-functions
-        formatter(param) {
-          if (param.data.value) {
-            return param.data.name + ':' + param.data.value;
-          } else if (param.data.value === 0) {
-            console.log('111111');
-            return param.data.name + ':' + 0;
-          } else {
-            return param.data.name ;
-          }
-        }
-      },
-      data: this.listData,
-      categories: [
-        {
-          name: '营业总收入',
-        },
-        {
-          name: '主营业务收入',
-        },
-        {
-          name: '利润总额',
-        },
-        {
-          name: '净利润',
-        },
-        {
-          name: '纳税总额',
-        },
-        {
-          name: '所有者权益合计',
-        }],
-      force: {
-        repulsion: 1000,
-        gravity: 0.2
-      },
-      edges: this.listDataEdge
-    });
+    this.bcOption.series = this.listData;
+    console.log(this.bcOption);
   }
 
   onEchartInit(event) {
     this.ecahrtBC = event;
+    console.log(this.ecahrtBC);
   }
   resizeChart() {
-    if (this.ecahrtBC) {
-      this.ecahrtBC.setOption(this.bcOption, true);
-    }
+      if (this.ecahrtBC) {
+        this.ecahrtBC.setOption(this.bcOption, true);
+      }
   }
 }

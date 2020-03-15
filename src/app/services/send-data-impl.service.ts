@@ -7,7 +7,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 })
 export class SendDataImplService extends SendDataService {
 
-  dataUrl = 'http://47.98.46.41:80/data';
+  dataUrl = 'http://47.98.46.41:800/data';
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type':  'application/x-www-form-urlencoded'

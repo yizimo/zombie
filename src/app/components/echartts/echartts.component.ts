@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {EcharMapService} from '../../services/echar-map.service';
 
 @Component({
   selector: 'app-echartts',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EcharttsComponent implements OnInit {
 
-  constructor() { }
+  advice: any;
+  constructor(private pipService: EcharMapService) { }
 
   ngOnInit() {
+    this.getAdvice();
+  }
+
+  getAdvice() {
+    this.pipService.getEchartByPipByAdvice().subscribe(data => {
+      console.log(data);
+      this.advice = data.data.advice.obj1;
+    });
   }
 
 }

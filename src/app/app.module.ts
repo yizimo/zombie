@@ -28,7 +28,6 @@ import { EchartsSunburstComponent } from './components/echarts-sunburst/echarts-
 import { EchartsPipComponent } from './components/echarts-pip/echarts-pip.component';
 import { EchartRelationComponent } from './components/echart-relation/echart-relation.component';
 import { InfoComponent } from './components/info/info.component';
-import { BIComponent } from './components/info/bi/bi.component';
 import { IAComponent } from './components/info/ia/ia.component';
 import { FCComponent } from './components/info/fc/fc.component';
 import { BSComponent } from './components/info/bs/bs.component';
@@ -71,7 +70,6 @@ registerLocaleData(zh);
     EchartsPipComponent,
     EchartRelationComponent,
     InfoComponent,
-    BIComponent,
     IAComponent,
     FCComponent,
     BSComponent,

@@ -28,10 +28,10 @@
         <td>{{ data.companyId }}</td>
         <td>{{ data.flag == 1 ? '是' : '否' }}</td>
         <td>
-          <nz-tag [nzColor]="'#f50'" *ngIf="data.warningLevel >= 0.8">{{ data.warningLevel }}</nz-tag>
-          <nz-tag [nzColor]="'volcano'" *ngIf="data.warningLevel >= 0.6 && data.warningLevel < 0.8">{{ data.warningLevel }}</nz-tag>
-          <nz-tag [nzColor]="'orange'" *ngIf="data.warningLevel >= 0.5 && data.warningLevel < 0.6">{{ data.warningLevel }}</nz-tag>
-          <nz-tag [nzColor]="'green'" *ngIf="data.warningLevel < 0.5">{{ data.warningLevel }}</nz-tag>
+          <nz-tag [nzColor]="'#f50'" *ngIf="data.warningLevel >= 0.8">高</nz-tag>
+          <nz-tag [nzColor]="'volcano'" *ngIf="data.warningLevel >= 0.6 && data.warningLevel < 0.8">中</nz-tag>
+          <nz-tag [nzColor]="'orange'" *ngIf="data.warningLevel >= 0.5 && data.warningLevel < 0.6">低</nz-tag>
+          <nz-tag [nzColor]="'green'" *ngIf="data.warningLevel < 0.5">无</nz-tag>
         </td>
         <td>{{ data.advice }}</td>
       </tr>
