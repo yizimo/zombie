@@ -75,7 +75,7 @@ export class EchartsSunburstComponent implements OnInit {
 
   resizeChart() {
     console.log(this.listSunData);
-      this.sunChart.setOption(this.sunburstOption, true);
+    this.sunChart.setOption(this.sunburstOption, true);
   }
 
 

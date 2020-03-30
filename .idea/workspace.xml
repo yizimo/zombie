@@ -2,41 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d95235a5-d759-4bf5-8601-88c6e2983c24" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/proxy.conf.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/data/data.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/data/data.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/data/data.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/data/data.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/echarts-sunburst/echarts-sunburst.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/echarts-sunburst/echarts-sunburst.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/echartts/echartts.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/echartts/echartts.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/echartts/echartts.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/echartts/echartts.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/info/bc/bc.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/info/bc/bc.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/info/bi/bi.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/info/bi/bi.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/info/bi/bi.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/info/bi/bi.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/info/bs/bs.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/info/bs/bs.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/info/fc/fc.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/info/fc/fc.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/info/fc/fc.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/info/fc/fc.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/info/ia/ia.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/info/ia/ia.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/info/ia/ia.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/info/ia/ia.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/info/info.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/info/info.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/info/info.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/info/info.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/show-echarts/chain-card/chain-card.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/show-echarts/chain-card/chain-card.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/show-echarts/chain-card/chain-card.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/show-echarts/chain-card/chain-card.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/show-echarts/chain-table/chain-table.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/show-echarts/chain-table/chain-table.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/show-echarts/chain-table/chain-table.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/show-echarts/chain-table/chain-table.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/show-echarts/show-echarts.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/show-echarts/show-echarts.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/show-echarts/show-echarts.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/show-echarts/show-echarts.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/services/data-impl-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/data-impl-service.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/services/data.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/data.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/services/echar-map-impl.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/echar-map-impl.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/services/echar-map.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/echar-map.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/services/get-send-data-impl.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/get-send-data-impl.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/services/info-impl.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/info-impl.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/services/send-data-impl.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/send-data-impl.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proxy.conf.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/proxy.conf.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +129,11 @@
       <workItem from="1584170696266" duration="5308000" />
       <workItem from="1584191314401" duration="4877000" />
       <workItem from="1584250214931" duration="15518000" />
-      <workItem from="1584280196550" duration="1650000" />
+      <workItem from="1584280196550" duration="1875000" />
+      <workItem from="1584446844181" duration="927000" />
+      <workItem from="1585381061527" duration="231000" />
+      <workItem from="1585474099029" duration="282000" />
+      <workItem from="1585550350789" duration="3051000" />
     </task>
     <task id="LOCAL-00001" summary="前端">
       <created>1581252588259</created>
@@ -322,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584196806008</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="数据中心筛选">
+      <created>1584282107783</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1584282107783</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,12 +348,12 @@
       <screen x="0" y="23" width="1440" height="816" />
     </state>
     <state x="458" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.816@0.23.1440.816" timestamp="1581835514100" />
-    <state x="313" y="38" key="CommitChangelistDialog2" timestamp="1584196804107">
+    <state x="313" y="38" key="CommitChangelistDialog2" timestamp="1584282106160">
       <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state x="313" y="38" key="CommitChangelistDialog2/0.23.1440.821@0.23.1440.821" timestamp="1583159062154" />
     <state x="313" y="38" key="CommitChangelistDialog2/0.23.1440.822@0.23.1440.822" timestamp="1584194959040" />
-    <state x="313" y="38" key="CommitChangelistDialog2/0.23.1440.823@0.23.1440.823" timestamp="1584196804107" />
+    <state x="313" y="38" key="CommitChangelistDialog2/0.23.1440.823@0.23.1440.823" timestamp="1584282106160" />
     <state x="101" y="123" width="1240" height="616" key="DiffContextDialog" timestamp="1581922527684">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
@@ -405,12 +393,12 @@
     </state>
     <state x="230" y="72" key="SettingsEditor/0.23.1440.821@0.23.1440.821" timestamp="1581930666927" />
     <state x="230" y="72" key="SettingsEditor/0.23.1440.823@0.23.1440.823" timestamp="1581253374467" />
-    <state x="321" y="175" key="Vcs.Push.Dialog.v2" timestamp="1584196813359">
+    <state x="321" y="175" key="Vcs.Push.Dialog.v2" timestamp="1584282126280">
       <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state x="321" y="175" key="Vcs.Push.Dialog.v2/0.23.1440.821@0.23.1440.821" timestamp="1583159069109" />
     <state x="321" y="175" key="Vcs.Push.Dialog.v2/0.23.1440.822@0.23.1440.822" timestamp="1584194967520" />
-    <state x="321" y="175" key="Vcs.Push.Dialog.v2/0.23.1440.823@0.23.1440.823" timestamp="1584196813359" />
+    <state x="321" y="175" key="Vcs.Push.Dialog.v2/0.23.1440.823@0.23.1440.823" timestamp="1584282126280" />
     <state x="101" y="123" width="1240" height="616" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1584276763136">
       <screen x="0" y="23" width="1440" height="822" />
     </state>

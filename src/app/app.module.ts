@@ -47,6 +47,7 @@ import {SendDataService} from './services/send-data.service';
 import {SendDataImplService} from './services/send-data-impl.service';
 import {GetSendDataService} from './services/get-send-data.service';
 import {GetSendDataImplService} from './services/get-send-data-impl.service';
+import { RishComponent } from './components/info/rish/rish.component';
 
 registerLocaleData(zh);
 @NgModule({
@@ -77,7 +78,8 @@ registerLocaleData(zh);
     ChainTableComponent,
     ChainMapComponent,
     ChainCardComponent,
-    ChainBarComponent
+    ChainBarComponent,
+    RishComponent
   ],
   imports: [
     BrowserModule,

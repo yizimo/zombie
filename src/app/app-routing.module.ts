@@ -14,6 +14,7 @@ import {FCComponent} from './components/info/fc/fc.component';
 import {BSComponent} from './components/info/bs/bs.component';
 import {BCComponent} from './components/info/bc/bc.component';
 import {EchartRelationComponent} from './components/echart-relation/echart-relation.component';
+import {RishComponent} from './components/info/rish/rish.component';
 
 const routes: Routes = [
   {
@@ -44,7 +45,8 @@ const routes: Routes = [
       { path: 'bc', component: BCComponent},
       { path: 'bs', component: BSComponent},
       { path: 'fc', component: FCComponent},
-      { path: 'ia', component: IAComponent}
+      { path: 'ia', component: IAComponent},
+      { path: 'rish', component: RishComponent}
     ]
   },
   {

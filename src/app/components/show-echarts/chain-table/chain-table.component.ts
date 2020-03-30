@@ -33,6 +33,7 @@ export class ChainTableComponent implements OnInit {
 
   getEchartByChinaTable() {
     this.echarMapService.getEchartByChinaTable().subscribe(data => {
+      console.log(data);
       console.log(data.data.china_table_chart);
       this.listVince = data.data.china_table_chart;
       this.listVince.forEach(item => {

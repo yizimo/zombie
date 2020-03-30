@@ -8,7 +8,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class DataImplServiceService extends DataService {
 
-   dataUrl = 'http://47.98.46.41:800/data';
+   dataUrl = 'http://47.98.46.41:80/data';
 
   constructor(private http: HttpClient) {
     super();
