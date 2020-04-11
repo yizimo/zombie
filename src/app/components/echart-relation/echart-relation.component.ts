@@ -67,8 +67,10 @@ export class EchartRelationComponent implements OnInit {
   }
 
   getBig(event) {
-    console.log(event.data.id);
-    this.router.navigate(['info', event.data.id]);
+    console.log(event);
+    console.log(event.name.split('-')[1]);
+    // console.log(event.data.id);
+    this.router.navigate(['info', event.name.split('-')[1]]);
   }
   getInfo() {
     this.echarMapService.getEcharByRelate().subscribe(data => {

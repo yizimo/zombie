@@ -8,6 +8,8 @@ interface Data {
   companyId: number;
   flag: number;
   warningLevel: number;
+  trade: string;
+  area: string;
 }
 @Component({
   selector: 'app-data',
@@ -36,6 +38,9 @@ export class DataComponent implements OnInit {
     this.dataService.getResult(this.id).subscribe(data => {
       console.log(data);
       this.listOfData = data.data.results;
+      // this.listOfData.forEach( item => {
+      //   item.trade = 'lala';
+      // })
       this.copyListOfData = this.listOfData;
 
     });

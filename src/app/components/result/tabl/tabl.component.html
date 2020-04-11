@@ -33,7 +33,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let data of innerTable.data">
+          <tr *ngFor="let data of innerTable.data">
                 <td>{{ data.componyId }}</td>
                 <td *ngIf="data.flag">{{ data.flag == true ? '是' : '否' }}</td>
                 <td *ngIf="data.advice">

@@ -12,6 +12,7 @@ import {LocalStorage} from '../../utils/local-storage';
 })
 export class InfoComponent implements OnInit {
 
+  url: string;
   color = 'red';
   info: any;
   id: any;

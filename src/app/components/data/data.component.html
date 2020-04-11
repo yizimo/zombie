@@ -13,11 +13,13 @@
     <nz-table #filterTable [nzData]="listOfData">
       <thead>
       <tr>
-        <th>企业ID</th>
-        <th  nzShowFilter
+        <th nzWidth="12%">企业ID</th>
+        <th nzWidth="15%">行业</th>
+        <th>区域</th>
+        <th nzWidth="22%"  nzShowFilter
              [nzFilters]="listOfIs"
              (nzFilterChange)="filter(listOfWarnName, $event)">是否为僵尸企业</th>
-        <th nzShowFilter
+        <th nzWidth="17%" nzShowFilter
             [nzFilters]="listOfWarn"
             (nzFilterChange)="filter( $event,listOfIsName)">预警级别</th>
         <th>整改意见</th>
@@ -25,15 +27,26 @@
       </thead>
       <tbody>
       <tr *ngFor="let data of filterTable.data">
-        <td>{{ data.companyId }}</td>
-        <td>{{ data.flag == 1 ? '是' : '否' }}</td>
+        <td><a routerLink="/info/{{data.companyId }}">{{ data.companyId }}</a></td>
+        <td>{{ data.trade }}</td>
+        <td>{{data.area}}</td>
+        <td style="padding-left: 60px !important;">
+          <span style="color: red" *ngIf="data.flag == 1">是</span>
+          <span  *ngIf="data.flag != 1">否</span>
+<!--          {{ data.flag == 1 ? '是僵尸企业' : '不是僵尸企业' }}-->
+        </td>
         <td>
           <nz-tag [nzColor]="'#f50'" *ngIf="data.warningLevel >= 0.8">高</nz-tag>
           <nz-tag [nzColor]="'volcano'" *ngIf="data.warningLevel >= 0.6 && data.warningLevel < 0.8">中</nz-tag>
           <nz-tag [nzColor]="'orange'" *ngIf="data.warningLevel >= 0.5 && data.warningLevel < 0.6">低</nz-tag>
           <nz-tag [nzColor]="'green'" *ngIf="data.warningLevel < 0.5">无</nz-tag>
         </td>
-        <td>{{ data.advice }}</td>
+        <td>
+          <span  *ngIf="data.warningLevel >= 0.8">破产清退</span>
+          <span *ngIf="data.warningLevel >= 0.6 && data.warningLevel < 0.8">兼并重组</span>
+          <span  *ngIf="data.warningLevel >= 0.5 && data.warningLevel < 0.6">扶持发展</span>
+          <nz-tag  *ngIf="data.warningLevel < 0.5"></nz-tag>
+        </td>
       </tr>
       </tbody>
     </nz-table>
