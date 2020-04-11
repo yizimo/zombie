@@ -15,6 +15,7 @@ import {BSComponent} from './components/info/bs/bs.component';
 import {BCComponent} from './components/info/bc/bc.component';
 import {EchartRelationComponent} from './components/echart-relation/echart-relation.component';
 import {RishComponent} from './components/info/rish/rish.component';
+import {AgainComponent} from './components/again/again.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,9 @@ const routes: Routes = [
       { path: 'single', component: SingleComponent},
       { path: 'more', component: MoreComponent}
     ]
+  },
+  {
+    path: 'again', component: AgainComponent
   },
   {
     path: 'result/:id', component: ResultComponent,

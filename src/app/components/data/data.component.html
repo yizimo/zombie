@@ -7,6 +7,9 @@
       <button nz-button nzType="primary" nzSearch (click)="getResultBySearchName()"><i nz-icon nzType="search"></i></button>
     </ng-template>
   </div>
+  <div nz-col class="gutter-row" nzSpan="6" [nzPush]=11>
+    <button nz-button nzType="primary" style="float: right" (click)="exportTable()">导出</button>
+  </div>
   <div nz-col class="gutter-row" nzSpan="3" nzOffset="15">
   </div>
   <div nz-col nzSpan="22" [nzPush]=1 style="min-height: 750px">

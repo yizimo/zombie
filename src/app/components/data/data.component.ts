@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {Result} from '../../kind/result';
 import {DataService} from '../../services/data.service';
 import {ActivatedRoute} from '@angular/router';
+import * as FileSaver from 'file-saver';
+import * as XLSX from 'xlsx';
 
 interface Data {
   advice: string;
@@ -113,4 +115,20 @@ export class DataComponent implements OnInit {
     });
     return flag1;
   }
+
+  // 导出
+  exportTable() {
+    const exportItem = this.listOfData;
+    const worksheet: XLSX.WorkSheet = XLSX.utils.json_to_sheet(exportItem);
+    const workbook: XLSX.WorkBook = { Sheets: { data: worksheet }, SheetNames: ['data'] };
+    const excelBuffer: any = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
+    this.saveAsExcelFile(excelBuffer, '数据中心');
+  }
+  private saveAsExcelFile(buffer: any, fileName: string) {
+    const data: Blob = new Blob([buffer], {
+      type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8'
+    });
+    FileSaver.saveAs(data, fileName + '_' + new Date().getTime() + '.xls');
+  }
+
 }
